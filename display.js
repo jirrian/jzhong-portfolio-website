@@ -54,15 +54,29 @@ function showMedium(){
 }
 
 function makeDivs(work){
+	// get wrapper div
+	var wrapper = document.getElementById("wrapper");
+
+	// create content div for work
 	var work_div = document.createElement("div");
 	work_div.classList.add("content");
-	
-	//work_div.appendChild
 
-	var wrapper = document.getElementById("wrapper");
+	// create first image
+	var work_image = document.createElement("img");
+	work_image.src = 'portfolio_images/' + work['photos'][0];
+	work_div.appendChild(work_image);
+
+	// create title text
+	var work_title = document.createElement("span");
+	if(work["year"]["start"] == work["year"]["end"]){
+		work_title.innerText = work["name"] + " (" + work["year"]["start"] + ")";
+	}
+	else{
+		work_title.innerText = work["name"] + " (" + work["year"]["start"] + "-" + work["year"]["end"] + ")";
+	}
+	work_title.classList.add("name");
+	work_div.appendChild(work_title); 
 	wrapper.appendChild(work_div);
-
-	//add content div for each work displayed
 
 }
 

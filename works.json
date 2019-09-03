@@ -33,7 +33,7 @@
 				"concept": "Exploration and appropriation of the meme medium, online it-girls, and internet oversharing to discuss identity, race, and mental health."
 			},
 			"mediums":[
-				"media", "all"
+				"media", "web", "all"
 			],
 			"photos":[
 				"adawrong.png"
@@ -55,7 +55,7 @@
 				"concept": "Installation exploring intersections of private vs. public spaces and individual experiences within a collective experience."
 			},
 			"mediums":[
-				"interactive", "all"
+				"interactive", "installation", "all"
 			],
 			"photos":[
 				"privatebeach_shelldetail.png",
