@@ -36,6 +36,10 @@ body {
 	color: white;
 }
 
+.navi-medium-selected{
+	background-color: red;
+}
+
 .demo_link:hover{
 	color:white;
 }

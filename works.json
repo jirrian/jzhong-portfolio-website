@@ -11,7 +11,7 @@
 				"concept": "Cateye glasses inspired by Americana and Nascar imagery."
 			},
 			"mediums": [
-				"design", "all"
+				"design"
 			],
 			"photos":[
 				"meteor_orange_blue.jpg"
@@ -33,7 +33,7 @@
 				"concept": "Exploration and appropriation of the meme medium, online it-girls, and internet oversharing to discuss identity, race, and mental health."
 			},
 			"mediums":[
-				"media", "web", "all"
+				"media", "web"
 			],
 			"photos":[
 				"adawrong.png"
@@ -55,7 +55,7 @@
 				"concept": "Installation exploring intersections of private vs. public spaces and individual experiences within a collective experience."
 			},
 			"mediums":[
-				"interactive", "installation", "all"
+				"interactive", "installation"
 			],
 			"photos":[
 				"privatebeach_shelldetail.png",

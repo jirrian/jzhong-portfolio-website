@@ -37,11 +37,15 @@ function showMedium(){
 
 	clearDivs();
 
-	//display relevant works based on medium
-	for(var i = 0; i < works['works'].length; i++){
-		if (works['works'][i]['mediums'].includes(this.id)){
-			console.log(works['works'][i]);
-			makePreviewDivs(works['works'][i]);
+	if(this.id == "all"){
+		showAll();
+	}
+	else{	//display relevant works based on medium
+		for(var i = 0; i < works['works'].length; i++){
+			if (works['works'][i]['mediums'].includes(this.id)){
+				console.log(works['works'][i]);
+				makePreviewDivs(works['works'][i]);
+			}
 		}
 	}
 
@@ -163,17 +167,13 @@ function clearDivs(){
 }
 
 function toggleButtons(medium_linkelem){
-		//turn this button red
-	medium_linkelem.parentNode.style.backgroundColor = "red";
-	//this.style.color = "white";
-	//this.classList.add("medium-selected");
+	//turn this button red w white text
 	medium_linkelem.parentNode.classList.add("navi-medium-selected");
 
 	//turn all others back to default white
 	var mediums = document.getElementsByClassName("medium");
 	for(var i = 0; i < mediums.length; i++){
 		if(mediums[i].id != medium_linkelem.id){
-			mediums[i].parentNode.style.backgroundColor = "white";
 			mediums[i].parentNode.classList.remove("navi-medium-selected");
 		}
 	}
