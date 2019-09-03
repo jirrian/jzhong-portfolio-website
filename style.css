@@ -26,7 +26,7 @@ a:visited {
 }
 
 /* mouse over link */
-.navi a:hover {
+.navi-main a:hover {
     color: black;
     text-decoration: underline wavy red;
 }
@@ -50,6 +50,10 @@ a:active {
     color: white;
 }
 
+.medium-selected {
+	color: white;
+}
+
 .content.img {
     max-width: 100%;
     height: auto;
@@ -68,7 +72,7 @@ a:active {
 	padding-bottom:15px;
 }
 
-.navi-wrapper{
+#navi-wrapper{
 	float:left;
 	margin-right:20px;
 }
@@ -79,7 +83,7 @@ a:active {
 	color: red;
 }
 
-.wrapper{
+#wrapper{
 	float:left;
 	vertical-align: top;
 	width:50%;
