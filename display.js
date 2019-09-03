@@ -18,6 +18,14 @@ function setUp(){
 	request.onload = function() {
   		works = request.response;
   		//console.log(works);
+  		var jsonObj = request.response;
+  		
+  		//sort works with most recent first
+  		works = jsonObj['works'].sort(function(a, b) {
+    		return b.year.end - a.year.end;
+		});
+
+		console.log(works);
   		showAll();
   	}
   	
@@ -27,8 +35,8 @@ function showAll(){
 	toggleButtons(document.getElementById("all"));
 
 	//display all works
-	for(var i = 0; i < works['works'].length; i++){
-		makePreviewDivs(works['works'][i]);
+	for(var i = 0; i < works.length; i++){
+		makePreviewDivs(works[i]);
 	}
 }
 
@@ -41,10 +49,9 @@ function showMedium(){
 		showAll();
 	}
 	else{	//display relevant works based on medium
-		for(var i = 0; i < works['works'].length; i++){
-			if (works['works'][i]['mediums'].includes(this.id)){
-				console.log(works['works'][i]);
-				makePreviewDivs(works['works'][i]);
+		for(var i = 0; i < works.length; i++){
+			if (works[i]['mediums'].includes(this.id)){
+				makePreviewDivs(works[i]);
 			}
 		}
 	}
