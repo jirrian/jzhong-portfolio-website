@@ -66,16 +66,6 @@ function makePreviewDivs(work){
 	var work_div = document.createElement("div");
 	work_div.classList.add("content");
 
-	// create first image
-	if(work['photos'] != null){
-		var work_image = document.createElement("img");
-		work_image.src = 'portfolio_images/' + work['photos'][0];
-		work_div.appendChild(work_image);
-	}
-	else{
-		//embed video
-	}
-
 
 	// create title text
 	var work_title = document.createElement("span");
@@ -86,7 +76,17 @@ function makePreviewDivs(work){
 		work_title.innerText = work["name"] + " (" + work["year"]["start"] + "-" + work["year"]["end"] + ")";
 	}
 	work_title.classList.add("name");
-	work_div.appendChild(work_title); 
+	work_div.appendChild(work_title);
+
+		// create first image
+	if(work['photos'] != null){
+		var work_image = document.createElement("img");
+		work_image.src = 'portfolio_images/' + work['photos'][0];
+		work_div.appendChild(work_image);
+	}
+	else{
+		//embed video
+	}
 
 	// div to hold details
 	var work_detail_div = document.createElement("div");
