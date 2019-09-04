@@ -66,6 +66,32 @@ function makePreviewDivs(work){
 	var work_div = document.createElement("div");
 	work_div.classList.add("content");
 
+	// create first image
+	if(work['photos'] != null){
+		var work_image = document.createElement("img");
+		work_image.src = 'portfolio_images/' + work['photos'][0];
+		work_div.appendChild(work_image);
+	}
+	else{
+		//embed video
+	}
+
+	// create div to hold extra photos
+	var work_photos_div = document.createElement("div");
+
+	// create rest of photos
+	if(work['photos'].length > 0){
+		for(var i = 1; i < work['photos'].length; i++){
+			var image = document.createElement("img");
+			image.src = 'portfolio_images/' + work['photos'][i];
+			work_photos_div.appendChild(image);
+		}
+	}
+
+	//make detail hidden by default
+	work_photos_div.style.display = "none";
+
+	work_div.appendChild(work_photos_div); 
 
 	// create title text
 	var work_title = document.createElement("span");
@@ -76,17 +102,7 @@ function makePreviewDivs(work){
 		work_title.innerText = work["name"] + " (" + work["year"]["start"] + "-" + work["year"]["end"] + ")";
 	}
 	work_title.classList.add("name");
-	work_div.appendChild(work_title);
-
-		// create first image
-	if(work['photos'] != null){
-		var work_image = document.createElement("img");
-		work_image.src = 'portfolio_images/' + work['photos'][0];
-		work_div.appendChild(work_image);
-	}
-	else{
-		//embed video
-	}
+	work_div.appendChild(work_title); 
 
 	// div to hold details
 	var work_detail_div = document.createElement("div");
@@ -100,15 +116,6 @@ function makePreviewDivs(work){
 		work_description.innerText = work["description"]["medium"];
 	}
 	work_detail_div.appendChild(work_description);
-
-	// create rest of photos
-	if(work['photos'].length > 0){
-		for(var i = 1; i < work['photos'].length; i++){
-			var image = document.createElement("img");
-			image.src = 'portfolio_images/' + work['photos'][i];
-			work_detail_div.appendChild(image);
-		}
-	}
 
 	// create links
 	if(work['links']['video'] != null){
@@ -149,9 +156,10 @@ function makePreviewDivs(work){
 	//make detail hidden by default
 	work_detail_div.style.display = "none";
 
-	// add eventlistner to show work details if div is clicked 
+	// add eventlistner to show hidden details if div is clicked 
 	work_div.addEventListener("click", function(){
 		showDetailDiv(work_detail_div);
+		showDetailDiv(work_photos_div);
 	}, false);
 
 	work_div.appendChild(work_detail_div);
