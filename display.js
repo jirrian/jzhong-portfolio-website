@@ -93,7 +93,12 @@ function makePreviewDivs(work){
 
 	// create description
 	var work_description = document.createElement("p");
-	work_description.innerText = work["description"]["medium"] + "\n" + work["description"]["concept"];
+	if(work["description"]["concept"] != null){
+		work_description.innerText = work["description"]["medium"] + "\n" + work["description"]["concept"];
+	}
+	else{
+		work_description.innerText = work["description"]["medium"];
+	}
 	work_detail_div.appendChild(work_description);
 
 	// create rest of photos

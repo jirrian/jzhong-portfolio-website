@@ -68,6 +68,77 @@
 				],
 				"demo": null
 			}
+		},
+		{
+			"name": "Buenos Aires",
+			"year": {
+				"start": 2015,
+				"end": 2015
+			},
+			"description": {
+				"medium": "Photograph series",
+				"concept": null
+			},
+			"mediums":[
+				"media"
+			],
+			"photos":[
+				"ba1.jpg",
+				"ba2.jpg"
+			],
+			"links":{
+				"video": null,
+				"blog": null,
+				"demo": null
+			}
+		},
+		{
+			"name": "Home",
+			"year": {
+				"start": 2016,
+				"end": 2016
+			},
+			"description": {
+				"medium": "Photograph series",
+				"concept": null
+			},
+			"mediums":[
+				"media"
+			],
+			"photos":[
+				"img008.jpg",
+				"img012.jpg",
+				"img013.jpg"
+			],
+			"links":{
+				"video": null,
+				"blog": null,
+				"demo": null
+			}
+		},
+		{
+			"name": "New Orleans",
+			"year": {
+				"start": 2016,
+				"end": 2016
+			},
+			"description": {
+				"medium": "Photograph series",
+				"concept": null
+			},
+			"mediums":[
+				"media"
+			],
+			"photos":[
+				"img038.jpg",
+				"img042.jpg",
+			],
+			"links":{
+				"video": null,
+				"blog": null,
+				"demo": null
+			}
 		}
+
 	]
 }
