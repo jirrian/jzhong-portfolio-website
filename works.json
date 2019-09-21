@@ -138,6 +138,127 @@
 				"blog": null,
 				"demo": null
 			}
+		},
+		{
+			"name": "Paper Memory Paper Meaning",
+			"year": {
+				"start": 2018,
+				"end": 2018
+			},
+			"description": {
+				"medium": "Interactive website",
+				"concept": "A tarot deck designed from collected pieces of paper and the personal memories attached to them. It was created as an exploration of how meaning is attributed to tarot cards based on imagery and conventional understandings."
+			},
+			"mediums":[
+				"web",
+				"interactive"
+			],
+			"photos":[
+				"papermemorypapermeaning.png"
+			],
+			"links":{
+				"video": null,
+				"blog": [
+					"http://blog.jzhong.today/electronicrituals/Paper-Memory-Paper-Meaning/"
+				],
+				"demo": "http://www.jzhong.today/papermemorypapermeaning/"
+			}
+		},
+		{
+			"name": "Digital Amulet",
+			"year": {
+				"start": 2018,
+				"end": 2018
+			},
+			"description": {
+				"medium": "Custom printed circuit board, lazercut acrylic, and chain",
+				"concept": "An electronic amulet that receives power through the internet. This concept is inspired by the supportive comments often left on personal instagram posts by people that have often never met in person or are physically distant. In a way, through our connections on social media, we can give each other protection and support. The lighting pattern on the LEDs change based on likes and comments on the users instagram posts."
+			},
+			"mediums":[
+				"design",
+				"interactive"
+			],
+			"photos":[
+				"digitalamulet.jpg"
+			],
+			"links":{
+				"video": "https://www.youtube.com/watch?v=fCvrKaWGQ8c",
+				"blog": [
+					"http://blog.jzhong.today/hardware/Digital-Amulet-Board-Design-Fabrication/",
+					"http://blog.jzhong.today/electronicrituals/Digital-Amulet-Programming/"
+				],
+				"demo": null
+			}
+		},
+		{
+			"name": "Asemic Writing Teachable Machine",
+			"year": {
+				"start": 2018,
+				"end": 2018
+			},
+			"description": {
+				"medium": "website with ml5 KNN classifier teachable machine",
+				"concept": "A teachable machine that allows the user to create digital asemic writing works with gestures. Inspired by the works of Cecil Touchon."
+			},
+			"mediums":[
+				"web",
+				"interactive"
+			],
+			"photos": null,
+			"links":{
+				"video": "https://www.youtube.com/watch?v=TMpmqJIXQF0",
+				"blog": [
+					"http://blog.jzhong.today/computationaltypo/Asemic-Writing-Teachable-Machine/"
+				],
+				"demo": null
+			}
+		},
+		{
+			"name": "Someone Brand New",
+			"year": {
+				"start": 2017,
+				"end": 2017
+			},
+			"description": {
+				"medium": "Music video",
+				"concept": "Video made in collaboration with Haiyi Huang. Music by fi ft. ammi."
+			},
+			"mediums":[
+				"media"
+			],
+			"photos": null,
+			"links":{
+				"video": "https://vimeo.com/245221449",
+				"blog": null,
+				"demo": null
+			}
+		},
+		{
+			"name": "Memorial to TKettle",
+			"year": {
+				"start": 2018,
+				"end": 2018
+			},
+			"description": {
+				"medium": "VR experience",
+				"concept": "A virtual memorial to TKettle on St. Marks (closed Fall 2017)."
+			},
+			"mediums":[
+				"interactive",
+				"mixedreality"
+			],
+			"photos": [
+				"tkettle1.png",
+				"tkettle2.png",
+				"tkettle3.png",
+				"tkettle4.png",
+				"tkettle5.png"
+			],
+			"links":{
+				"video": null,
+				"blog": null,
+				"demo": null
+			}
 		}
 
 	]
