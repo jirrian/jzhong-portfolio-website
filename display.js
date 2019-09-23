@@ -80,7 +80,7 @@ function makePreviewDivs(work){
 	var work_photos_div = document.createElement("div");
 
 	// create rest of photos
-	if(work['photos'].length > 0){
+	if(work['photos'] != null){
 		for(var i = 1; i < work['photos'].length; i++){
 			var image = document.createElement("img");
 			image.src = 'portfolio_images/' + work['photos'][i];
