@@ -73,7 +73,8 @@ function makePreviewDivs(work){
 		work_div.appendChild(work_image);
 	}
 	else{
-		//embed video
+		//embed video when there is no images
+		work_div.appendChild(embedVideo(work['links']['video']));
 	}
 
 	// create div to hold extra photos
@@ -118,8 +119,10 @@ function makePreviewDivs(work){
 	work_detail_div.appendChild(work_description);
 
 	// create links
-	if(work['links']['video'] != null){
+	// embed video when there is also images
+	if(work['links']['video'] != null && work['photos'] != null){
 		//embed video
+		work_detail_div.appendChild(embedVideo(work['links']['video']));
 	}
 
 	if(work['links']['blog'] != null){
@@ -197,6 +200,15 @@ function toggleButtons(medium_linkelem){
 			mediums[i].parentNode.classList.remove("navi-medium-selected");
 		}
 	}
+}
+
+function embedVideo(videolink){
+	var video = document.createElement("iframe");
+	video.src = work['links']['video'];
+	video.frameborder = "0";
+	video.allow = "autoplay; fullscreen";
+	video.setAttribute('allowFullScreen', '');
+	return video;
 }
 
 function showAbout(){
