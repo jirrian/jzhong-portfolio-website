@@ -64,7 +64,7 @@
 			"links":{
 				"video": null,
 				"blog": [
-					"http://blog.jzhong.today/pcomp/Intro-to-PComp-Midterm/"
+					"https://blog.jzhong.today/pcomp/Intro-to-PComp-Midterm/"
 				],
 				"demo": null
 			}
@@ -159,9 +159,9 @@
 			"links":{
 				"video": null,
 				"blog": [
-					"http://blog.jzhong.today/electronicrituals/Paper-Memory-Paper-Meaning/"
+					"https://blog.jzhong.today/electronicrituals/Paper-Memory-Paper-Meaning/"
 				],
-				"demo": "http://www.jzhong.today/papermemorypapermeaning/"
+				"demo": "https://www.jzhong.today/papermemorypapermeaning/"
 			}
 		},
 		{
@@ -184,8 +184,8 @@
 			"links":{
 				"video": "https://www.youtube.com/watch?v=fCvrKaWGQ8c",
 				"blog": [
-					"http://blog.jzhong.today/hardware/Digital-Amulet-Board-Design-Fabrication/",
-					"http://blog.jzhong.today/electronicrituals/Digital-Amulet-Programming/"
+					"https://blog.jzhong.today/hardware/Digital-Amulet-Board-Design-Fabrication/",
+					"https://blog.jzhong.today/electronicrituals/Digital-Amulet-Programming/"
 				],
 				"demo": null
 			}
@@ -208,9 +208,9 @@
 			"links":{
 				"video": "https://www.youtube.com/watch?v=TMpmqJIXQF0",
 				"blog": [
-					"http://blog.jzhong.today/computationaltypo/Asemic-Writing-Teachable-Machine/"
+					"https://blog.jzhong.today/computationaltypo/Asemic-Writing-Teachable-Machine/"
 				],
-				"demo": null
+				"demo": "https://www.jzhong.today/asemicWritingTeachableMachine/"
 			}
 		},
 		{
