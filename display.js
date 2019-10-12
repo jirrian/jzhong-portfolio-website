@@ -1,33 +1,44 @@
 //setup
 var works;
 
-function setUp(){
+async function setUp(){
 	var mediums = document.getElementsByClassName("medium");
 
 	for(var i = 0; i < mediums.length; i++){
 		mediums[i].addEventListener("click", showMedium ,false);
 	}
 
-		// call to load json file with card info
-    var requesturl = 'https://raw.githubusercontent.com/jirrian/jirrian.github.io/master/works.json';
-    var request = new XMLHttpRequest();
-    request.open('GET', requesturl);
-    request.responseType = 'json';
-	request.send();
+	// get json file
+	const response = await fetch('https://raw.githubusercontent.com/jirrian/jirrian.github.io/master/works.json');
+	const jsonObj = await response.json();
+	//sort works with most recent first
+  	works = jsonObj['works'].sort(function(a, b){
+    	return b.year.end - a.year.end;
+	});
 
-	request.onload = function() {
-  		works = request.response;
-  		//console.log(works);
-  		var jsonObj = request.response;
+	console.log(works);
+  	showAll();
+
+ //    var requesturl = 'https://raw.githubusercontent.com/jirrian/jirrian.github.io/master/works.json';
+ //    var request = new XMLHttpRequest();
+ //    request.open('GET', requesturl);
+ //    request.responseType = 'json';
+	// request.send();
+
+	// request.onload = function() {
+ //  		works = request.response;
+ //  		//console.log(works);
+ //  		var jsonObj = request.response;
   		
-  		//sort works with most recent first
-  		works = jsonObj['works'].sort(function(a, b) {
-    		return b.year.end - a.year.end;
-		});
+ //  		//sort works with most recent first
+ //  		works = jsonObj['works'].sort(function(a, b) {
+ //    		return b.year.end - a.year.end;
+	// 	});
 
-		console.log(works);
-  		showAll();
-  	}
+	// 	console.log(works);
+ //  		showAll();
+ //  	}
+
   	
 }
 
@@ -202,13 +213,19 @@ function toggleButtons(medium_linkelem){
 	}
 }
 
-function embedVideo(videolink){
+function embedVideo(videoLink){
 	var video = document.createElement("iframe");
-	video.src = work['links']['video'];
-	video.frameborder = "0";
+	video.src = videoLink;
+	video.setAttribute('frameborder', '0');
 	video.allow = "autoplay; fullscreen";
 	video.setAttribute('allowFullScreen', '');
-	return video;
+
+	// create wrapper div and append video to it
+	var videoWrapper = document.createElement("div");
+	videoWrapper.className = "video_wrapper";
+	videoWrapper.appendChild(video);
+
+	return videoWrapper;
 }
 
 function showAbout(){
