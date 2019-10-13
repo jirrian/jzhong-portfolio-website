@@ -2,10 +2,10 @@
 var works;
 
 async function setUp(){
-	var mediums = document.getElementsByClassName("medium");
+	var mediumButtons = document.getElementsByClassName("navi-medium");
 
-	for(var i = 0; i < mediums.length; i++){
-		mediums[i].addEventListener("click", showMedium ,false);
+	for(var i = 0; i < mediumButtons.length; i++){
+		mediumButtons[i].addEventListener("click", showMedium ,false);
 	}
 
 	// get json file
@@ -47,7 +47,7 @@ function showAll(){
 
 	//display all works
 	for(var i = 0; i < works.length; i++){
-		makePreviewDivs(works[i]);
+		makeWorkDivs(works[i]);
 	}
 }
 
@@ -62,20 +62,23 @@ function showMedium(){
 	else{	//display relevant works based on medium
 		for(var i = 0; i < works.length; i++){
 			if (works[i]['mediums'].includes(this.id)){
-				makePreviewDivs(works[i]);
+				makeWorkDivs(works[i]);
 			}
 		}
 	}
 
 }
 
-function makePreviewDivs(work){
+function makeWorkDivs(work){
 	// get wrapper div
 	var wrapper = document.getElementById("wrapper");
 
 	// create content div for work
 	var work_div = document.createElement("div");
 	work_div.classList.add("content");
+
+	//animation
+	work_div.classList.add("hvr-icon-hang");
 
 	// create first image
 	if(work['photos'] != null){
@@ -88,22 +91,20 @@ function makePreviewDivs(work){
 		work_div.appendChild(embedVideo(work['links']['video']));
 	}
 
+
 	// create div to hold extra photos
 	var work_photos_div = document.createElement("div");
+	//make extra photos hidden by default
+	work_photos_div.style.display = "none";
 
-	// create rest of photos
 	if(work['photos'] != null){
 		for(var i = 1; i < work['photos'].length; i++){
 			var image = document.createElement("img");
 			image.src = 'portfolio_images/' + work['photos'][i];
 			work_photos_div.appendChild(image);
 		}
+		work_div.appendChild(work_photos_div); 
 	}
-
-	//make detail hidden by default
-	work_photos_div.style.display = "none";
-
-	work_div.appendChild(work_photos_div); 
 
 	// create title text
 	var work_title = document.createElement("span");
@@ -115,6 +116,13 @@ function makePreviewDivs(work){
 	}
 	work_title.classList.add("name");
 	work_div.appendChild(work_title); 
+
+	// create icon for animation
+	var icon = document.createElement("i");
+	icon.classList.add("fa");
+	icon.classList.add("fa-chevron-down");
+	icon.classList.add("hvr-icon");
+	work_div.appendChild(icon);
 
 	// div to hold details
 	var work_detail_div = document.createElement("div");
@@ -174,6 +182,7 @@ function makePreviewDivs(work){
 	work_div.addEventListener("click", function(){
 		showDetailDiv(work_detail_div);
 		showDetailDiv(work_photos_div);
+		toggleAnimation(work_detail_div);
 	}, false);
 
 	work_div.appendChild(work_detail_div);
@@ -192,6 +201,27 @@ function showDetailDiv(work_detail_div){
 	}
 }
 
+// toggle arrow animation and icon
+function toggleAnimation(work_detail_div){
+	if(work_detail_div.style.display == "block"){
+		work_detail_div.parentNode.classList.remove("hvr-icon-hang");
+		work_detail_div.parentNode.classList.add("hvr-icon-bob");
+
+		var icon = work_detail_div.parentNode.querySelector(".fa");
+		icon.classList.remove("fa-chevron-down");
+		icon.classList.add("fa-chevron-up");
+	}
+	else{
+		work_detail_div.parentNode.classList.add("hvr-icon-hang");
+		work_detail_div.parentNode.classList.remove("hvr-icon-bob");
+
+		var icon = work_detail_div.parentNode.querySelector(".fa");
+		icon.classList.remove("fa-chevron-up");
+		icon.classList.add("fa-chevron-down");
+	}
+
+}
+
 function clearDivs(){
 	//clear all divs
 	var wrapper = document.getElementById("wrapper");
@@ -200,15 +230,15 @@ function clearDivs(){
   	}
 }
 
-function toggleButtons(medium_linkelem){
+function toggleButtons(mediumButton){
 	//turn this button red w white text
-	medium_linkelem.parentNode.classList.add("navi-medium-selected");
+	mediumButton.classList.add("navi-medium-selected");
 
 	//turn all others back to default white
-	var mediums = document.getElementsByClassName("medium");
-	for(var i = 0; i < mediums.length; i++){
-		if(mediums[i].id != medium_linkelem.id){
-			mediums[i].parentNode.classList.remove("navi-medium-selected");
+	var mediumButtons = document.getElementsByClassName("navi-medium");
+	for(var i = 0; i < mediumButtons.length; i++){
+		if(mediumButtons[i].id != mediumButton.id){
+			mediumButtons[i].classList.remove("navi-medium-selected");
 		}
 	}
 }
