@@ -277,7 +277,7 @@ a:active {
   animation-direction: normal, alternate;
 }
 
-.fa{
+.fa-chevron-up, .fa-chevron-down{
 	padding-left: 5px;
 	float: right;
 }
