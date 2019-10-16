@@ -6,36 +6,39 @@ html{
 
 body {
   
-  font-family: 'Inconsolata', monospace;
+  font-family: 'Cutive Mono', monospace;
   margin: 0px;
 }
 
+#logo{
+	font-family: 'Space Mono', monospace;
+}
+
+#index{
+	background: blue;
+	color:white;
+}
 
 /* unvisited link */
 a:link {
-    color: black;
-    text-decoration: none;
+    text-decoration: underline;
+	color: black;
 }
 
 /* visited link */
 a:visited {
-    color: black;
-    text-decoration: none;
+    text-decoration: underline;
+	color: black;
 }
 
 /* mouse over link */
 a:hover {
-    color: gray;
-    text-decoration: none;
+    text-decoration: underline;
+    color:gray;
 }
 /* selected link */
 a:active {
-    color: red;
     text-decoration: none;
-}
-
-.content a{
-	text-decoration: underline;
 }
 
 .demo_link:hover{
@@ -47,6 +50,33 @@ a:active {
 	text-decoration: underline;
 }
 
+#logo a{
+	color:red;
+}
+
+#logo a:hover{
+	color:red;
+	text-decoration: none;
+}
+
+#index a{
+	color:white;
+}
+
+#index a:hover{
+	color:blue;
+	background: white;
+}
+
+#index #logo a:hover{
+	color:white;
+	text-decoration: none;
+}
+
+#navi-wrapper a{
+	text-decoration: none;
+}
+
 .content.img {
     max-width: 100%;
     height: auto;
@@ -56,7 +86,7 @@ a:active {
 .navi{
 	display:block;
 	width: 180px;
-	margin-top:20px;
+	margin-bottom:20px;
 	border-bottom: 3px solid;
 	border-right: 3px solid;
 	border-top: 1px solid;
@@ -72,12 +102,12 @@ a:active {
 
 .navi-medium{
 	width: 180px;
-	border-color: red;
-	color: red;
+	border-color: black;
+	color: black;
 }
 
 .navi-medium-selected{
-	background-color: red;
+	background-color: black;
 	color:white;
 }
 
@@ -89,14 +119,13 @@ a:active {
 }
 
 .content{
-	margin-top:20px;
+	margin-bottom:20px;
 	border-bottom: 3px solid;
 	border-right: 3px solid;
 	border-top: 1px solid;
 	border-left: 1px solid;
 	padding:10px;
 	word-wrap: break-word;
-	background-color:white;
 }
 
 .content img{
@@ -302,7 +331,7 @@ a:active {
   left: 0;
   right: 0;
   bottom: 0;
-  background: red;
+  background: black;
   -webkit-transform: scaleX(0);
   transform: scaleX(0);
   -webkit-transform-origin: 0 50%;
@@ -339,4 +368,47 @@ a:active {
 }
 .hvr-icon-fade:hover .hvr-icon, .hvr-icon-fade:focus .hvr-icon, .hvr-icon-fade:active .hvr-icon {
   color: blue;
+  background-color: white;
+}
+
+/*
+Moving Letters
+https://tobiasahlin.com/moving-letters/#7
+*/
+
+.ml11 {
+  font-weight: 200;
+  font-size:46px;
+}
+
+.ml11 .text-wrapper {
+  position: relative;
+  display: inline-block;
+  padding-top: 0.1em;
+  padding-right: 0.05em;
+  padding-bottom: 0.15em;
+}
+
+.ml11 .line {
+  opacity: 0;
+  position: absolute;
+  left: 0;
+  height: 70%;
+  width: 0.6em;
+  background-color: red;
+  transform-origin: 0 50%;
+  top:20%;
+}
+
+#index .ml11 .line {
+	background-color: #fff;
+}
+
+.ml11 .line1 {  
+  left: 0;
+}
+
+.ml11 .letter {
+  display: inline-block;
+  line-height: 1em;
 }
