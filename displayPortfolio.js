@@ -148,23 +148,13 @@ function makeWorkDivs(work){
 	}
 
 	if(work['links']['blog'] != null){
-		var blog_heading = document.createElement("p");
+		var blog_heading = document.createElement("ul");
 		blog_heading.innerText = "Documentation: \n"
 		work_detail_div.appendChild(blog_heading);
 
 		//list blog links
 		for(var i = 0; i < work['links']['blog'].length; i++){
-			var link = document.createElement("a");
-			link.setAttribute('href', work['links']['blog'][i]);
-			link.setAttribute('target', "_blank");
-
-			fetch(work['links']['blog'][i]).then((response) => response.text()).then((html) => {
-		      const doc = new DOMParser().parseFromString(html, "text/html");
-		      const title = doc.querySelectorAll('title')[0];
-		      link.innerText =  title.innerText;
-    		});
-
-    		blog_heading.appendChild(link);
+			createBlogListItem(blog_heading, work['links']['blog'][i]);
 		}
 	}
 
@@ -259,5 +249,45 @@ function embedVideo(videoLink){
 	videoWrapper.appendChild(video);
 
 	return videoWrapper;
+}
+
+async function createBlogListItem(blogHeading, blogLink){
+	const response = await fetch(blogLink);
+
+	const html = await response.text();
+	const doc = new DOMParser().parseFromString(html, "text/html");
+
+	var title = doc.querySelectorAll('title')[0];
+
+	var blog_listitem = document.createElement("li");
+    var link = document.createElement("a");
+	link.setAttribute('href', blogLink);
+	link.setAttribute('target', "_blank");
+
+	//remove blog site title
+	var titleText = title.innerText.replace(/\u2013|\u2014/g, "-");
+	if(titleText.includes('- ITP Blog')){
+		link.innerText = titleText.split(' - ')[0];
+	}
+	else{
+		link.innerText = title.innerText;
+	}
+
+	blog_listitem.appendChild(link);
+    blogHeading.appendChild(blog_listitem);
+
+
+	// fetch(work['links']['blog'][i]).then((response) => response.text()).then((html) => {
+ //    	const doc = new DOMParser().parseFromString(html, "text/html");
+ //    	var title = doc.querySelectorAll('title')[0];
+
+ //    	var blog_listitem = document.createElement("li");
+	//     var link = document.createElement("a");
+	// 	link.setAttribute('href', work['links']['blog'][i]);
+	// 	link.setAttribute('target', "_blank");
+ //  		link.innerText = title.innerText;
+ //  		blog_listitem.appendChild(link);
+	//     blog_heading.appendChild(blog_listitem);
+ // 		});
 }
 
