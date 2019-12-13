@@ -20,6 +20,31 @@ async function setUp(){
 	console.log(works);
   	showAll();
 
+  		// lazy load
+	// https://developers.google.com/web/fundamentals/performance/lazy-loading-guidance/images-and-video
+
+		  var lazyImages = [].slice.call(document.querySelectorAll("img.lazy"));
+		  console.log(lazyImages);
+
+		  if ("IntersectionObserver" in window) {
+		    let lazyImageObserver = new IntersectionObserver(function(entries, observer) {
+		      entries.forEach(function(entry) {
+		        if (entry.isIntersecting) {
+		          let lazyImage = entry.target;
+		          lazyImage.src = lazyImage.dataset.src;
+		          //lazyImage.srcset = lazyImage.dataset.srcset;
+		          lazyImage.classList.remove("lazy");
+		          lazyImageObserver.unobserve(lazyImage);
+		        }
+		      });
+		    });
+
+		    lazyImages.forEach(function(lazyImage) {
+		      lazyImageObserver.observe(lazyImage);
+		    });
+		  } else {
+		    // Possibly fall back to a more compatible method here
+		  }
 
 
  //    var requesturl = 'https://raw.githubusercontent.com/jirrian/jirrian.github.io/master/works.json';
@@ -44,6 +69,7 @@ async function setUp(){
 
   	
 }
+
 
 function showAll(){
 	toggleButtons(document.getElementById("all"));
@@ -86,7 +112,11 @@ function makeWorkDivs(work){
 	// create first image
 	if(work['photos'] != null){
 		var work_image = document.createElement("img");
-		work_image.src = 'portfolio_images/' + work['photos'][0];
+		//lazy loading
+		work_image.classList.add("lazy");
+		work_image.src = 'portfolio_images/placeholders/' + 'placeholder_' + work['photos'][0];
+		work_image.setAttribute("data-src", 'portfolio_images/' + work['photos'][0]);
+		work_image.setAttribute("style", "width:100%;");
 		work_div.appendChild(work_image);
 	}
 	else{
@@ -103,7 +133,10 @@ function makeWorkDivs(work){
 	if(work['photos'] != null){
 		for(var i = 1; i < work['photos'].length; i++){
 			var image = document.createElement("img");
-			image.src = 'portfolio_images/' + work['photos'][i];
+			image.classList.add("lazy");
+			image.src = 'portfolio_images/placeholders/' + 'placeholder_' + work['photos'][i];
+			image.setAttribute("data-src", 'portfolio_images/' + work['photos'][i]);
+			image.setAttribute("style", "width:100%;");
 			work_photos_div.appendChild(image);
 		}
 		work_div.appendChild(work_photos_div); 
