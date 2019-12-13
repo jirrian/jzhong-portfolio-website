@@ -20,32 +20,6 @@ async function setUp(){
 	console.log(works);
   	showAll();
 
-  		// lazy load
-	// https://developers.google.com/web/fundamentals/performance/lazy-loading-guidance/images-and-video
-
-		  var lazyImages = [].slice.call(document.querySelectorAll("img.lazy"));
-		  console.log(lazyImages);
-
-		  if ("IntersectionObserver" in window) {
-		    let lazyImageObserver = new IntersectionObserver(function(entries, observer) {
-		      entries.forEach(function(entry) {
-		        if (entry.isIntersecting) {
-		          let lazyImage = entry.target;
-		          lazyImage.src = lazyImage.dataset.src;
-		          //lazyImage.srcset = lazyImage.dataset.srcset;
-		          lazyImage.classList.remove("lazy");
-		          lazyImageObserver.unobserve(lazyImage);
-		        }
-		      });
-		    });
-
-		    lazyImages.forEach(function(lazyImage) {
-		      lazyImageObserver.observe(lazyImage);
-		    });
-		  } else {
-		    // Possibly fall back to a more compatible method here
-		  }
-
 
  //    var requesturl = 'https://raw.githubusercontent.com/jirrian/jirrian.github.io/master/works.json';
  //    var request = new XMLHttpRequest();
@@ -70,6 +44,33 @@ async function setUp(){
   	
 }
 
+function lazyLoad(){
+	// lazy load
+	// https://developers.google.com/web/fundamentals/performance/lazy-loading-guidance/images-and-video
+
+	  var lazyImages = [].slice.call(document.querySelectorAll("img.lazy"));
+	  console.log(lazyImages);
+
+	  if ("IntersectionObserver" in window) {
+	    let lazyImageObserver = new IntersectionObserver(function(entries, observer) {
+	      entries.forEach(function(entry) {
+	        if (entry.isIntersecting) {
+	          let lazyImage = entry.target;
+	          lazyImage.src = lazyImage.dataset.src;
+	          //lazyImage.srcset = lazyImage.dataset.srcset;
+	          lazyImage.classList.remove("lazy");
+	          lazyImageObserver.unobserve(lazyImage);
+	        }
+	      });
+	    });
+
+	    lazyImages.forEach(function(lazyImage) {
+	      lazyImageObserver.observe(lazyImage);
+	    });
+	  } else {
+	    // Possibly fall back to a more compatible method here
+	  }
+}
 
 function showAll(){
 	toggleButtons(document.getElementById("all"));
@@ -78,6 +79,8 @@ function showAll(){
 	for(var i = 0; i < works.length; i++){
 		makeWorkDivs(works[i]);
 	}
+
+	lazyLoad();
 }
 
 function showMedium(){
@@ -95,6 +98,7 @@ function showMedium(){
 			}
 		}
 	}
+	lazyLoad();
 
 }
 
