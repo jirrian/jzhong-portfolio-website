@@ -26,7 +26,7 @@
 			"name": "@ada.wrong",
 			"year": {
 				"start": 2016,
-				"end": 2019
+				"end": 2018
 			},
 			"description": {
 				"medium": "Instagram account",
@@ -268,7 +268,7 @@
 			},
 			"description": {
 				"medium": "Custom printed circuit boards and lazercut acrylic",
-				"concept": "Part one of ITP thesis where the artist is examining the blurry line between “person” and “thing” by positioning herself as a cyborg making cyborgs."
+				"concept": "Part one of ITP thesis where the artist is examining the blurry line between “person” and “thing” by positioning herself as a cyborg making cyborgs. Person Thing #1 is a garment constructed of acrylic and printed circuit boards or pcbs with speakers and colored leds. The speakers are fed audio through aux cord inputs connected to mobile devices playing different videos. The audio quality is intentionally distorted with a lot of interference and feedback. The goal was to depict a synthetic skin that comes to life through media. The speakers’ audio blend together, conceptually imbuing the skin with media."
 			},
 			"mediums":[
 				"wearable",
@@ -296,7 +296,7 @@
 			},
 			"description": {
 				"medium": "AR mobile application",
-				"concept": "Part one of ITP thesis where the artist is examining the blurry line between “person” and “thing” by positioning herself as a cyborg making cyborgs."
+				"concept": "Part two of ITP thesis where the artist is examining the blurry line between “person” and “thing” by positioning herself as a cyborg making cyborgs. Person Thing #2 is an AR interactive sculpture. A ghostly human-scale 3D figure is placed on the ground in augmented reality. The ghost wanders around the area aimlessly but comes towards the viewer every so often. The ghost is made from media, a combination of 3D models of robot and anime figures readily downloadable from the internet. The goal of this piece was to create a digital synthetic ghost with a haunting presence."
 			},
 			"mediums":[
 				"mixedreality",
