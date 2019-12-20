@@ -11,7 +11,7 @@
 				"concept": "Cateye glasses inspired by Americana and Nascar imagery."
 			},
 			"mediums": [
-				"design"
+				"wearable"
 			],
 			"photos":[
 				"meteor_orange_blue.jpg"
@@ -175,7 +175,7 @@
 				"concept": "An electronic amulet that receives power through the internet. This concept is inspired by the supportive comments often left on personal instagram posts by people that have often never met in person or are physically distant. In a way, through our connections on social media, we can give each other protection and support. The lighting pattern on the LEDs change based on likes and comments on the users instagram posts."
 			},
 			"mediums":[
-				"design",
+				"wearable",
 				"interactive"
 			],
 			"photos":[
@@ -257,6 +257,59 @@
 			"links":{
 				"video": null,
 				"blog": null,
+				"demo": null
+			}
+		},
+		{
+			"name": "Person Thing #1",
+			"year": {
+				"start": 2019,
+				"end": 2019
+			},
+			"description": {
+				"medium": "Custom printed circuit boards and lazercut acrylic",
+				"concept": "Part one of ITP thesis where the artist is examining the blurry line between “person” and “thing” by positioning herself as a cyborg making cyborgs."
+			},
+			"mediums":[
+				"wearable",
+				"installation"
+			],
+			"photos": [
+				"thesis_personthing1.jpg",
+				"thesis_personthing1_front.jpg",
+				"thesis_personthing1_back.jpg"
+			],
+			"links":{
+				"video": "https://player.vimeo.com/video/335928201",
+				"blog": [
+					"https://blog.jzhong.today/Thesis-Final-Documentation/",
+					"https://blog.jzhong.today/wearables/Person-Thing-1/"
+				],
+				"demo": null
+			}
+		},
+		{
+			"name": "Person Thing #2",
+			"year": {
+				"start": 2019,
+				"end": 2019
+			},
+			"description": {
+				"medium": "AR mobile application",
+				"concept": "Part one of ITP thesis where the artist is examining the blurry line between “person” and “thing” by positioning herself as a cyborg making cyborgs."
+			},
+			"mediums":[
+				"mixedreality",
+				"installation"
+			],
+			"photos": [
+				"thesis_personthing1.jpg"
+			],
+			"links":{
+				"video": "https://player.vimeo.com/video/335541114",
+				"blog": [
+					"https://blog.jzhong.today/Thesis-Final-Documentation/",
+				],
 				"demo": null
 			}
 		}
