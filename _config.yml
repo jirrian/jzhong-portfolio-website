@@ -49,6 +49,23 @@ social_links:
   # - username: jekyll2
   #   instance: example.com
 
+collections:
+  medium:
+    output: true
+  work:
+    output: true
+
+defaults:
+  - scope:
+      path: ""
+      type: "medium"
+    values:
+      layout: "worksmedium"
+  - scope:
+      path: ""
+      type: "work"
+    values:
+      layout: "work"
 
 plugins:
   - jekyll-seo-tag
