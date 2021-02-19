@@ -1,0 +1,38 @@
+---
+layout: default
+---
+
+<div class="grid">
+
+		<div class='row'>
+			{% assign assets = "/assets/portfolio_images/" %}
+			{% assign assets_placeholder = "/assets/portfolio_images/placeholders/placeholder_" %}
+			{% assign works = site.data.works %}
+			{% for work in works %}
+				<div class='col-lg-6 col-'>
+					<div class="card">
+						{% if work[1]['preview'] != nil %}
+							{% if work[1]['preview'] | split: "." | last == "mp4" %}
+								{% assign poster = assets_placeholder | append: work[1]['preview'] %}
+								{% assign source = assets | append: work[1]['preview'] %}
+								{% include video-embed.html poster=poster src=source %}
+							{% else %}
+								{% assign source = assets | append: work[1]['preview'] %}
+								{% assign placeholder = assets_placeholder | append: work[1]['preview'] %}
+								<img src="{{ placeholder }}" data-src="{{ source }}" class="img-fluid lazy w-100" alt="{{ work[1]['name'] }}">
+							{% endif %}
+						{% else %}
+								{% assign source = assets | append: work[1]['photos'][0] %}
+								{% assign placeholder = assets_placeholder | append: work[1]['photos'][0] %}
+								<img src="{{ placeholder }}" data-src="{{ source }}" class="img-fluid lazy w-100" alt="{{ work[1]['name'] }}">
+						{% endif %}
+						<div class="card-body d-flex flex-column">
+						    <h5 class="card-title">{{ work[1]['name'] }} {{ work[1]['year']['end'] }}</h5>
+						    	<h6 class="card-subtitle mb-2">{{ work[1]['description']['medium'] }}</h6>
+						    <div class="card-text">{{ work[1]['description']['concept'] }}</div>
+						</div>
+					</div>
+				</div>
+			{% endfor %}
+	</div>
+</div>

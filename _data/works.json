@@ -1,5 +1,5 @@
 {
-	"works":[
+	"meteor-glasses":
 		{
 			"name": "Meteor Glasses",
 			"year": {
@@ -13,6 +13,7 @@
 			"mediums": [
 				"wearable"
 			],
+			"preview": null,
 			"photos":[
 				"meteor_orange_blue.jpg"
 			],
@@ -22,6 +23,7 @@
 				"demo": null
 			}	
 		},
+	"private-beach":
 		{
 			"name": "Private Beach",
 			"year": {
@@ -35,6 +37,7 @@
 			"mediums":[
 				"interactive", "installation"
 			],
+			"preview": null,
 			"photos":[
 				"privatebeach_shelldetail.png",
 				"privatebeach_users.png"
@@ -47,6 +50,7 @@
 				"demo": null
 			}
 		},
+	"buenos-aires":	
 		{
 			"name": "Buenos Aires",
 			"year": {
@@ -60,6 +64,7 @@
 			"mediums":[
 				"media"
 			],
+			"preview": null,
 			"photos":[
 				"ba1.jpg",
 				"ba2.jpg"
@@ -70,6 +75,7 @@
 				"demo": null
 			}
 		},
+	"home":
 		{
 			"name": "Home",
 			"year": {
@@ -83,6 +89,7 @@
 			"mediums":[
 				"media"
 			],
+			"preview": null,
 			"photos":[
 				"img008.jpg",
 				"img012.jpg",
@@ -94,6 +101,7 @@
 				"demo": null
 			}
 		},
+	"new-orleans":
 		{
 			"name": "New Orleans",
 			"year": {
@@ -107,6 +115,7 @@
 			"mediums":[
 				"media"
 			],
+			"preview": null,
 			"photos":[
 				"img038.jpg",
 				"img042.jpg"
@@ -117,6 +126,7 @@
 				"demo": null
 			}
 		},
+	"paper-memory-paper-meaning":	
 		{
 			"name": "Paper Memory Paper Meaning",
 			"year": {
@@ -131,6 +141,7 @@
 				"web",
 				"interactive"
 			],
+			"preview": null,
 			"photos":[
 				"papermemorypapermeaning.png"
 			],
@@ -142,6 +153,7 @@
 				"demo": "https://www.jzhong.today/papermemorypapermeaning/"
 			}
 		},
+	"digital-amulet":	
 		{
 			"name": "Digital Amulet",
 			"year": {
@@ -156,6 +168,7 @@
 				"wearable",
 				"interactive"
 			],
+			"preview": null,
 			"photos":[
 				"digitalamulet.jpg"
 			],
@@ -168,6 +181,7 @@
 				"demo": null
 			}
 		},
+	"asemic-writing-teachable-machine":
 		{
 			"name": "Asemic Writing Teachable Machine",
 			"year": {
@@ -182,6 +196,7 @@
 				"web",
 				"interactive"
 			],
+			"preview": null,
 			"photos": null,
 			"links":{
 				"video": "https://www.youtube.com/embed/TMpmqJIXQF0",
@@ -191,6 +206,7 @@
 				"demo": "https://www.jzhong.today/asemicWritingTeachableMachine/"
 			}
 		},
+	"someone-brand-new":	
 		{
 			"name": "Someone Brand New",
 			"year": {
@@ -204,6 +220,7 @@
 			"mediums":[
 				"media"
 			],
+			"preview": null,
 			"photos": null,
 			"links":{
 				"video": "https://player.vimeo.com/video/245221449",
@@ -211,6 +228,7 @@
 				"demo": null
 			}
 		},
+	"memorial-to-tkettle":
 		{
 			"name": "Memorial to TKettle",
 			"year": {
@@ -225,6 +243,7 @@
 				"interactive",
 				"mixedreality"
 			],
+			"preview": null,
 			"photos": [
 				"tkettle1.png",
 				"tkettle2.png",
@@ -238,6 +257,7 @@
 				"demo": null
 			}
 		},
+	"person-thing-1":
 		{
 			"name": "Person Thing #1",
 			"year": {
@@ -252,6 +272,7 @@
 				"wearable",
 				"installation"
 			],
+			"preview": null,
 			"photos": [
 				"thesis_personthing1.jpg",
 				"thesis_personthing1_front.jpg",
@@ -266,6 +287,7 @@
 				"demo": null
 			}
 		},
+	"person-thing-2":
 		{
 			"name": "Person Thing #2",
 			"year": {
@@ -280,6 +302,7 @@
 				"mixedreality",
 				"installation"
 			],
+			"preview": null,
 			"photos": [
 				"thesis_personthing2.jpg"
 			],
@@ -291,6 +314,4 @@
 				"demo": null
 			}
 		}
-
-	]
 }
