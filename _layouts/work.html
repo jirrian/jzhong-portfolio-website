@@ -2,40 +2,48 @@
 layout: default
 ---
 
-<script src="/script/lazyloading.js"></script>
-<div class="grid">
-		<div class='row'>
-			{% assign assets = "/assets/portfolio_images/" %}
-			{% assign assets_placeholder = "/assets/portfolio_images/placeholders/placeholder_" %}
-			{% assign works = site.data.works %}
-			{% for work in works %}
-				<div class='col-lg-6 col-'>
-					<div class="card">
-						{% if work[1]['preview'] != nil %}
-							{% assign preview_fileext = work[1]['preview'] | slice: -3, 3 %}
-							{% if preview_fileext == "mp4" %}
-								{% assign poster = assets_placeholder | append: work[1]['preview'] %}
-								{% assign source = assets | append: work[1]['preview'] %}
-								{% include video-embed.html poster=poster src=source %}
-							{% else %}
-								{% assign source = assets | append: work[1]['preview'] %}
-								{% assign placeholder = assets_placeholder | append: work[1]['preview'] %}
-								<img src="{{ placeholder }}" data-src="{{ source }}" class="img-fluid lazy w-100" alt="{{ work[1]['name'] }}">
-							{% endif %}
-						{% elsif work[1]['photos'][0] != nil %}
-								{% assign source = assets | append: work[1]['photos'][0] %}
-								{% assign placeholder = assets_placeholder | append: work[1]['photos'][0] %}
-								<img src="{{ placeholder }}" data-src="{{ source }}" class="img-fluid lazy w-100" alt="{{ work[1]['name'] }}">
-						{% endif %}
-						<div class="card-body mt-2 d-flex flex-column">
-						    <span class="card-title">
-						    	<span class="fw-bold">{{ work[1]['name'] }}</span>
-						   		<span>({{ work[1]['year']['end'] }})</span>
-						   	</span>
-						    <span class="card-subtitle fw-light">{{ work[1]['description']['medium'] }}</span>
-						</div>
-					</div>
-				</div>
-			{% endfor %}
+<div class="content">
+	<script src="/script/lazyloading.js"></script>
+	{% assign assets = "/assets/portfolio_images/" %}
+	{% assign assets_placeholder = "/assets/portfolio_images/placeholders/placeholder_" %}
+	{% assign title_slug = page.title | slugify %}
+
+	<div class="work-title">
+		<span class="fw-bold">{{ site.data.works[title_slug]['name'] }}</span>
+		<span>({{ site.data.works[title_slug]['year']['end'] }})</span>
 	</div>
+	<div class="fw-light">{{ site.data.works[title_slug]['description']['medium'] }}</div>
+	<div class="">{{ site.data.works[title_slug]['description']['concept'] }}</div>
+
+	{% assign work_images_array = site.data.works[title_slug]['photos'] %}
+	{% if work_images_array != nil %}
+		<div class="work-images">
+		{% for photo in work_images_array %}
+			{% assign source = assets | append: photo %}
+			{% assign placeholder = assets_placeholder | append: photo %}
+			<img src="{{ placeholder }}" data-src="{{ source }}" class="img-fluid lazy w-100" alt="{{ work[1]['name'] }}">
+		{% endfor %}
+		</div>
+	{% endif %}
+
+	{% assign work_videolink = site.data.works[title_slug]['links']['video'] %}
+	{% if work_videolink != nil %}
+		<div class="work-video">
+			{% include youtube-video-embed.html src=work_videolink %}
+		</div>
+	{% endif %}
+
+	{% assign work_bloglink_array = site.data.works[title_slug]['links']['blog'] %}
+	{% if work_bloglink_array != nil %}
+		<p>Documentation:</p>
+		<ul id="work-links">
+
+		{% for link in work_bloglink_array %}
+			<li>
+				<a class="linkload" href="{{ link }}">Documentation Link</a>
+			</li>
+		{% endfor %}
+		</ul>
+		<script src="/script/createBlogListItem.js"></script>
+	{% endif %}
 </div>
