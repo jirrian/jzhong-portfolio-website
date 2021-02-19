@@ -2,8 +2,8 @@
 layout: default
 ---
 
+<script src="/script/lazyloading.js"></script>
 <div class="grid">
-
 		<div class='row'>
 			{% assign assets = "/assets/portfolio_images/" %}
 			{% assign assets_placeholder = "/assets/portfolio_images/placeholders/placeholder_" %}
@@ -12,7 +12,8 @@ layout: default
 				<div class='col-lg-6 col-'>
 					<div class="card">
 						{% if work[1]['preview'] != nil %}
-							{% if work[1]['preview'] | split: "." | last == "mp4" %}
+							{% assign preview_fileext = work[1]['preview'] | slice: -3, 3 %}
+							{% if preview_fileext == "mp4" %}
 								{% assign poster = assets_placeholder | append: work[1]['preview'] %}
 								{% assign source = assets | append: work[1]['preview'] %}
 								{% include video-embed.html poster=poster src=source %}
@@ -21,7 +22,7 @@ layout: default
 								{% assign placeholder = assets_placeholder | append: work[1]['preview'] %}
 								<img src="{{ placeholder }}" data-src="{{ source }}" class="img-fluid lazy w-100" alt="{{ work[1]['name'] }}">
 							{% endif %}
-						{% else %}
+						{% elsif work[1]['photos'][0] != nil %}
 								{% assign source = assets | append: work[1]['photos'][0] %}
 								{% assign placeholder = assets_placeholder | append: work[1]['photos'][0] %}
 								<img src="{{ placeholder }}" data-src="{{ source }}" class="img-fluid lazy w-100" alt="{{ work[1]['name'] }}">

@@ -18,37 +18,40 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Your awesome title
-email: your-email@example.com
-description: >- # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
-baseurl: "/" # the subpath of your site, e.g. /blog
+title: jzhong
+email: jillianzhong@yahoo.com
+description: >- # this means to ignore newlines until "baseurl:" Add your site description here in the _config.yml file. It will appear in your document head meta (for Google search results) and title of the website (in browser tabs).
+  Jillian Zhong's portfolio website. Jillian Zhong is a designer, artist, and content creator based in New York City.
+
+baseurl: "/" # the subpath of your site, e.g. /blog. leave blank if this is your main github pages repository
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: jekyllrb
-github_username:  jekyll
+
 
 # Build settings
-remote-theme: jirrian/jekyll-theme-image-grid@main
+remote_theme: jirrian/jekyll-theme-image-grid@main
+
+# generate social links in footer
+social_links:
+  twitter: 
+  github: jirrian
+  # facebook: jekyll
+  instagram: 
+  # linkedin: jekyll
+  # pinterest: jekyll
+  # youtube: jekyll
+  # youtube_channel: UC8CXR0-3I70i1tfPg1PAE1g
+  # youtube_channel_name: CloudCannon
+
+  # Mastodon instances
+  # mastodon:
+  # - username: jekyll
+  #   instance: example.com
+  # - username: jekyll2
+  #   instance: example.com
 
 
-# Exclude from processing.
-# The following items will not be processed, by default.
-# Any item listed under the `exclude:` key here will be automatically added to
-# the internal "default list".
-#
-# Excluded items can be processed by explicitly listing the directories or
-# their entries' file path in the `include:` list.
-#
-# exclude:
-#   - .sass-cache/
-#   - .jekyll-cache/
-#   - gemfiles/
-#   - Gemfile
-#   - Gemfile.lock
-#   - node_modules/
-#   - vendor/bundle/
-#   - vendor/cache/
-#   - vendor/gems/
-#   - vendor/ruby/
+plugins:
+  - jekyll-seo-tag
+
+include:
+  - _images
