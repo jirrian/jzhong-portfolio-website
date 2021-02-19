@@ -27,10 +27,12 @@ layout: default
 								{% assign placeholder = assets_placeholder | append: work[1]['photos'][0] %}
 								<img src="{{ placeholder }}" data-src="{{ source }}" class="img-fluid lazy w-100" alt="{{ work[1]['name'] }}">
 						{% endif %}
-						<div class="card-body d-flex flex-column">
-						    <h5 class="card-title">{{ work[1]['name'] }} {{ work[1]['year']['end'] }}</h5>
-						    	<h6 class="card-subtitle mb-2">{{ work[1]['description']['medium'] }}</h6>
-						    <div class="card-text">{{ work[1]['description']['concept'] }}</div>
+						<div class="card-body mt-2 d-flex flex-column">
+						    <span class="card-title">
+						    	<span class="fw-bold">{{ work[1]['name'] }}</span>
+						   		<span>({{ work[1]['year']['end'] }})</span>
+						   	</span>
+						    <span class="card-subtitle fw-light">{{ work[1]['description']['medium'] }}</span>
 						</div>
 					</div>
 				</div>

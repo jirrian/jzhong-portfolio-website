@@ -1,0 +1,45 @@
+body {
+  
+  font-family: 'Cutive Mono', monospace;
+  margin: 0px;
+}
+
+#logo{
+	font-family: 'Space Mono', monospace;
+}
+
+/* unvisited link */
+.content a:link {
+    text-decoration: underline;
+	color: black;
+}
+
+/* visited link */
+.content a:visited {
+    text-decoration: underline;
+	color: black;
+}
+
+/* mouse over link */
+.content a:hover {
+    text-decoration: underline;
+    color:gray;
+}
+/* selected link */
+.content a:active {
+    text-decoration: none;
+}
+
+.card{
+	margin-bottom:20px;
+	border-bottom: 3px solid;
+	border-right: 3px solid;
+	border-top: 1px solid;
+	border-left: 1px solid;
+	padding: 1rem;
+	word-wrap: break-word;
+}
+
+.card-body{
+	padding: 0;
+}
