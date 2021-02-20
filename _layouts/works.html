@@ -11,7 +11,7 @@ layout: default
 			{% assign works = site.data.works %}
 			{% for work in works %}
 				<div class='col-'>
-					<div class="card hvr-pop">
+					<div class="card hvr-grow">
 						{% if work[1]['preview'] != nil %}
 							{% assign preview_fileext = work[1]['preview'] | slice: -3, 3 %}
 							{% if preview_fileext == "mp4" %}
