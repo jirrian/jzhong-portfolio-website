@@ -30,6 +30,28 @@ body {
     text-decoration: none;
 }
 
+/* unvisited link */
+.grid-content a:link {
+	color: black;
+	text-decoration: none;
+}
+
+/* visited link */
+.grid-content a:visited {
+	color: black;
+	text-decoration: none;
+}
+
+/* mouse over link */
+.grid-content a:hover {
+    color:gray;
+    text-decoration: none;
+}
+/* selected link */
+.grid-content a:active {
+    text-decoration: underline;
+}
+
 .card{
 	margin-bottom:20px;
 	border-bottom: 3px solid;
@@ -47,4 +69,103 @@ body {
 ul {
   list-style-type: none;
   padding-inline-start: 0px;
+}
+
+/* Hover CSS */
+/* Pop */
+@-webkit-keyframes hvr-pop {
+  50% {
+    -webkit-transform: scale(1.03);
+    transform: scale(1.03);
+  }
+}
+@keyframes hvr-pop {
+  50% {
+    -webkit-transform: scale(1.03);
+    transform: scale(1.03);
+  }
+}
+.hvr-pop {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+.hvr-pop:hover, .hvr-pop:focus, .hvr-pop:active {
+  -webkit-animation-name: hvr-pop;
+  animation-name: hvr-pop;
+  -webkit-animation-duration: 0.3s;
+  animation-duration: 0.3s;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+}
+
+/* Responsive */
+
+@media (min-width: 1400px){
+	.card-work-image {
+	  	height: 540px;
+	  	width: 960px;
+	  	overflow: hidden;
+	}
+	.card-body {
+		width: 960px;
+	}
+}
+
+@media (min-width: 1200px) and (max-width: 1399px){
+	.card-work-image {
+	  	height: 540px;
+	  	width: 960px;
+	  	overflow: hidden;
+	}
+	.card-body {
+		width: 960px;
+	}
+}
+
+@media (min-width: 992px) and (max-width: 1199px){
+	.card-work-image {
+	  	height: 480px;
+	  	width: 854px;
+	  	overflow: hidden;
+	}
+	.card-body {
+		width: 854px;
+	}
+}
+
+@media (min-width: 768px) and (max-width: 991px){
+	.card-work-image {
+	  	height: 360px;
+	  	width: 640px;
+	  	overflow: hidden;
+	}
+	.card-body {
+		width: 640px;
+	}
+}
+
+@media (max-width: 767px){
+	.card-work-image {
+	  	height: 279px;
+	  	width: 496px;
+	  	overflow: hidden;
+	}
+	.card-body {
+		width: 496px;
+	}
+}
+
+@media (max-width: 575px){
+	.card-work-image {
+	  	height: auto;
+	  	width: 100%;
+	}
+	.card{
+		width: 100%;
+	}
 }

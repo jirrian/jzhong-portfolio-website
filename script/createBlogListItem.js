@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function() {
 	var linksToLoad = [].slice.call(document.querySelectorAll("a.linkload"));
-	console.log(linksToLoad);
+
 	linksToLoad.forEach(async function createBlogListItem(link){
 		var blogLink = link.href;
 		const response = await fetch(blogLink);
