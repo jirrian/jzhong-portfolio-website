@@ -242,7 +242,7 @@
 			},
 			"mediums":[
 				"interactive",
-				"mixedreality"
+				"mixed-reality"
 			],
 			"preview": null,
 			"photos": [
@@ -300,7 +300,7 @@
 				"concept": "Part two of ITP thesis where the artist is examining the blurry line between “person” and “thing” by positioning herself as a cyborg making cyborgs. Person Thing #2 is an AR interactive sculpture. A ghostly human-scale 3D figure is placed on the ground in augmented reality. The ghost wanders around the area aimlessly but comes towards the viewer every so often. The ghost is made from media, a combination of 3D models of robot and anime figures readily downloadable from the internet."
 			},
 			"mediums":[
-				"mixedreality",
+				"mixed-reality",
 				"installation",
 				"interactive"
 			],
