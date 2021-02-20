@@ -7,3 +7,5 @@ _site
 .jekyll-cache
 .jekyll-metadata
 vendor
+_data/work_files
+_data/medium_files

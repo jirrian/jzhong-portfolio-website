@@ -11,7 +11,7 @@
 				"concept": "Cateye glasses inspired by Americana and Nascar imagery."
 			},
 			"mediums": [
-				"wearable"
+				"fashion"
 			],
 			"preview": null,
 			"photos":[
@@ -35,7 +35,8 @@
 				"concept": "Installation exploring intersections of private vs. public spaces and individual experiences within a collective experience."
 			},
 			"mediums":[
-				"interactive", "installation"
+				"interactive",
+				"installation"
 			],
 			"preview": null,
 			"photos":[
@@ -138,8 +139,8 @@
 				"concept": "A tarot deck designed from collected pieces of paper and the personal memories attached to them. It was created as an exploration of how meaning is attributed to tarot cards based on imagery and conventional understandings."
 			},
 			"mediums":[
-				"web",
-				"interactive"
+				"interactive",
+				"net-art"
 			],
 			"preview": null,
 			"photos":[
@@ -165,8 +166,8 @@
 				"concept": "An electronic amulet that receives power through the internet. This concept is inspired by the supportive comments often left on personal instagram posts by people that have often never met in person or are physically distant. In a way, through our connections on social media, we can give each other protection and support. The lighting pattern on the LEDs change based on likes and comments on the users instagram posts."
 			},
 			"mediums":[
-				"wearable",
-				"interactive"
+				"interactive",
+				"wearable-tech"
 			],
 			"preview": null,
 			"photos":[
@@ -193,8 +194,8 @@
 				"concept": "A teachable machine that allows the user to create digital asemic writing works with gestures. Inspired by the works of Cecil Touchon."
 			},
 			"mediums":[
-				"web",
-				"interactive"
+				"interactive",
+				"net-art"
 			],
 			"preview": null,
 			"photos": null,
@@ -269,7 +270,7 @@
 				"concept": "Part one of ITP thesis where the artist is examining the blurry line between “person” and “thing” by positioning herself as a cyborg making cyborgs. Person Thing #1 is a garment constructed of acrylic and printed circuit boards or pcbs with speakers and colored leds. The speakers are fed audio through aux cord inputs connected to mobile devices playing different videos. The speakers’ audio blend together, conceptually imbuing the skin with media."
 			},
 			"mediums":[
-				"wearable",
+				"wearable-tech",
 				"installation"
 			],
 			"preview": null,
@@ -300,7 +301,8 @@
 			},
 			"mediums":[
 				"mixedreality",
-				"installation"
+				"installation",
+				"interactive"
 			],
 			"preview": null,
 			"photos": [
