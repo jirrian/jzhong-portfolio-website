@@ -18,11 +18,13 @@
 			  </button>
 			  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
 			    <div class="navbar-nav ms-auto">
-				    	{% for page in site.pages %}
-					      {% if page.title and page.name != "404.md" %}
-					      	<a class="nav-link" href="{{ page.url | relative_url }}">{{ page.title | escape }}</a>
-					      {% endif %}
-					    {% endfor %}
+			    	{% if page.title == "home" %}
+			    		<a class="nav-link active" aria-current="page" href="{{ '/' | relative_url }}">about</a>
+			    		<a class="nav-link" href="{{ '/works' | relative_url }}">works</a>
+			    	{% else %}
+			    		<a class="nav-link" href="{{ '/' | relative_url }}">about</a>
+			    		<a class="nav-link active" aria-current="page" href="{{ '/works' | relative_url }}">works</a>
+			    	{% endif %}
 			    </div>
 			  </div>
 			{% endif %}

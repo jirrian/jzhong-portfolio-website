@@ -11,7 +11,7 @@ layout: default
 			{% assign works = site.data.works %}
 			{% for work in works %}
 				{% if work[1]['mediums'] contains page.medium %}
-				<div class='col-'>
+				<div class='col- d-flex justify-content-center'>
 					<div class="card hvr-grow">
 						{% if work[1]['preview'] != nil %}
 							{% assign preview_fileext = work[1]['preview'] | slice: -3, 3 %}
