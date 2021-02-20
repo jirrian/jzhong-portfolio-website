@@ -10,7 +10,7 @@ layout: default
 			{% assign assets_placeholder = "/assets/portfolio_images/placeholders/placeholder_" %}
 			{% assign works = site.data.works %}
 			{% for work in works %}
-				<div class='col-'>
+				<div class='col- d-flex justify-content-center'>
 					<div class="card hvr-grow">
 						{% if work[1]['preview'] != nil %}
 							{% assign preview_fileext = work[1]['preview'] | slice: -3, 3 %}
