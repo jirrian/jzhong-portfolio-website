@@ -1,6 +1,6 @@
 <header class='header'>
 	<nav class="navbar sticky-top navbar-expand-lg navbar-light">
-		<div class="container-fluid">
+		<div class="container-fluid px-5">
 			<div class="navbar-brand" id="logo">
 		  		<script src="/script/displayLogo.js"></script>
 				<a href="{{ '/' | relative_url }}">
@@ -17,14 +17,27 @@
 			    <span class="navbar-toggler-icon"></span>
 			  </button>
 			  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-			    <div class="navbar-nav ms-auto">
+			    <div class="navbar-nav ms-auto d-flex flex-column">
 			    	{% if page.title == "home" %}
-			    		<a class="nav-link active" aria-current="page" href="{{ '/' | relative_url }}">about</a>
-			    		<a class="nav-link" href="{{ '/works' | relative_url }}">works</a>
+			    		<a class="nav-link active text-end" aria-current="page" href="{{ '/' | relative_url }}">about</a>
 			    	{% else %}
-			    		<a class="nav-link" href="{{ '/' | relative_url }}">about</a>
-			    		<a class="nav-link active" aria-current="page" href="{{ '/works' | relative_url }}">works</a>
+			    		<a class="nav-link text-end" href="{{ '/' | relative_url }}">about</a>
 			    	{% endif %}
+			    		
+						<div class="navbar-nav ms-auto">
+					    {% for medium in site.medium %}
+					    	{% if page.medium == "medium" %}
+					    		<a class="nav-link active" href="{{ '/works/' | append: medium.medium | relative_url }}">{{ medium.medium }}</a>
+					    	{% else %}
+					    		<a class="nav-link" href="{{ '/works/' | append: medium.medium | relative_url }}">{{ medium.medium }}</a>
+					    	{% endif %}
+					    {% endfor %}
+					    {% if page.title == "works" %}
+					    	<a class="nav-link active text-end" aria-current="page" href="{{ '/works' | relative_url }}">works</a>
+					    {% else %}
+					    	<a class="nav-link text-end" href="{{ '/works' | relative_url }}">works</a>
+					    {% endif %}
+					</div>
 			    </div>
 			  </div>
 			{% endif %}

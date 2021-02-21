@@ -1,5 +1,5 @@
 body {
-  
+  overflow-y: scroll;
   font-family: 'Cutive Mono', monospace;
   margin: 0px;
 }
@@ -69,6 +69,7 @@ body {
 	border-left: 1px solid;
 	padding: 1rem;
 	word-wrap: break-word;
+	border-radius: 0;
 }
 
 .card-body{
@@ -79,6 +80,12 @@ ul {
   list-style-type: none;
   padding-inline-start: 0px;
 }
+
+.navbar {
+	padding-top: 1rem;
+	padding-bottom: 1rem;
+}
+
 
 /* Hover CSS */
 /* Grow */
