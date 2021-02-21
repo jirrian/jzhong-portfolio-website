@@ -83,7 +83,12 @@ ul {
 
 .navbar {
 	padding-top: 1rem;
-	padding-bottom: 1rem;
+	padding-bottom: 3rem;
+}
+
+.nav-container{
+	padding-left: 3rem;
+	padding-right: 3rem;
 }
 
 
@@ -112,7 +117,7 @@ https://tobiasahlin.com/moving-letters/#7
 
 .ml11 {
   font-weight: 200;
-  font-size:46px;
+  font-size: 3rem;
 }
 
 .ml11 .text-wrapper {
@@ -187,6 +192,9 @@ https://tobiasahlin.com/moving-letters/#7
 	.ml12 .letter{
 		display: block;
 	}
+	.navbar {
+		padding-bottom: 1rem;
+	}
 }
 
 @media (min-width: 768px) and (max-width: 991px){
@@ -200,6 +208,13 @@ https://tobiasahlin.com/moving-letters/#7
 	}
 	.ml12 .letter{
 		display: block;
+	}
+	.nav-container{
+		padding-left: 1rem;
+		padding-right: 1rem;
+	}
+	.navbar {
+		padding-bottom: 1rem;
 	}
 }
 
@@ -215,6 +230,13 @@ https://tobiasahlin.com/moving-letters/#7
 	.ml12 .letter{
 		display: block;
 	}
+	.nav-container{
+		padding-left: 1rem;
+		padding-right: 1rem;
+	}
+	.navbar {
+		padding-bottom: 1rem;
+	}
 }
 
 @media (max-width: 575px){
@@ -227,5 +249,15 @@ https://tobiasahlin.com/moving-letters/#7
 	}
 	.ml12 .letter{
 		display: block;
+	}
+	.nav-container{
+		padding-left: 1rem;
+		padding-right: 1rem;
+	}
+	.ml11 {
+  		font-size: 2rem;
+	}
+	.navbar {
+		padding-bottom: 1rem;
 	}
 }
