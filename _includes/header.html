@@ -30,13 +30,13 @@
 					<div class="ml12 navbar-nav ms-auto">
 					    {% for medium in site.medium %}
 					    	{% if page.title == medium.title %}
-					    		<a class="nav-link-show letter nav-link active" aria-current="page" href="{{ medium.permalink | relative_url }}">{{ medium.title}}</a>
+					    		<a class="nav-link-show letter nav-link active text-end" aria-current="page" href="{{ medium.permalink | relative_url }}">{{ medium.title}}</a>
 					    	{% elsif page.medium != nil %}
-					    		<a class="nav-link-hide letter nav-link" href="{{ medium.permalink | relative_url }}">{{ medium.title }}</a>
+					    		<a class="nav-link-hide letter nav-link text-end" href="{{ medium.permalink | relative_url }}">{{ medium.title }}</a>
 					    	{% elsif page.title == "works" %}
-					    		<a class="nav-link-show letter nav-link" href="{{ medium.permalink | relative_url }}">{{ medium.title }}</a>
+					    		<a class="nav-link-show letter nav-link text-end" href="{{ medium.permalink | relative_url }}">{{ medium.title }}</a>
 					    	{% else %}
-					    		<a class="nav-link-hide letter nav-link" href="{{ medium.permalink | relative_url }}">{{ medium.title }}</a>
+					    		<a class="nav-link-hide letter nav-link text-end" href="{{ medium.permalink | relative_url }}">{{ medium.title }}</a>
 					    	{% endif %}
 					    {% endfor %}
 					    {% if page.title == "works" %}

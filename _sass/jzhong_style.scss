@@ -184,6 +184,9 @@ https://tobiasahlin.com/moving-letters/#7
 	.card-body {
 		width: 854px;
 	}
+	.ml12 .letter{
+		display: block;
+	}
 }
 
 @media (min-width: 768px) and (max-width: 991px){
@@ -194,6 +197,9 @@ https://tobiasahlin.com/moving-letters/#7
 	}
 	.card-body {
 		width: 640px;
+	}
+	.ml12 .letter{
+		display: block;
 	}
 }
 
@@ -206,6 +212,9 @@ https://tobiasahlin.com/moving-letters/#7
 	.card-body {
 		width: 496px;
 	}
+	.ml12 .letter{
+		display: block;
+	}
 }
 
 @media (max-width: 575px){
@@ -215,5 +224,8 @@ https://tobiasahlin.com/moving-letters/#7
 	}
 	.card, .card-body {
 		width: 100%;
+	}
+	.ml12 .letter{
+		display: block;
 	}
 }
