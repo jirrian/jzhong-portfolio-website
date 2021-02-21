@@ -13,7 +13,7 @@ layout: default
 		<span>({{ site.data.works[title_slug]['year']['end'] }})</span>
 	</div>
 	<div class="fw-light">{{ site.data.works[title_slug]['description']['medium'] }}</div>
-	<div class="">{{ site.data.works[title_slug]['description']['concept'] }}</div>
+	<div class="work-concept">{{ site.data.works[title_slug]['description']['concept'] }}</div>
 
 	{% assign work_images_array = site.data.works[title_slug]['photos'] %}
 	{% if work_images_array != nil %}
