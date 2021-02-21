@@ -1,5 +1,9 @@
 <header class='header'>
-	<nav class="navbar sticky-top navbar-expand-lg navbar-light">
+	{% if page.title == "works" %}
+		<nav class="mb-5 navbar sticky-top navbar-expand-xl navbar-light">
+	{% else %}
+		<nav class="mb-5 navbar sticky-top navbar-expand-xl navbar-light" id="navBar">
+	{% endif %}	
 		<div class="container-fluid px-5">
 			<div class="navbar-brand" id="logo">
 		  		<script src="/script/displayLogo.js"></script>
@@ -23,16 +27,19 @@
 			    	{% else %}
 			    		<a class="nav-link text-end" href="{{ '/' | relative_url }}">about</a>
 			    	{% endif %}
-			    		
-						<div class="navbar-nav ms-auto">
+					<div class="ml12 navbar-nav ms-auto">
 					    {% for medium in site.medium %}
-					    	{% if page.medium == "medium" %}
-					    		<a class="nav-link active" href="{{ '/works/' | append: medium.medium | relative_url }}">{{ medium.medium }}</a>
+					    	{% if page.title == medium.title %}
+					    		<a class="nav-link-show letter nav-link active" href="{{ medium.permalink | relative_url }}">{{ medium.title}}</a>
+					    	{% elsif page.medium != nil %}
+					    		<a class="nav-link-hide letter nav-link" href="{{ medium.permalink | relative_url }}">{{ medium.title }}</a>
+					    	{% elsif page.title == "works" %}
+					    		<a class="nav-link-show letter nav-link" href="{{ medium.permalink | relative_url }}">{{ medium.title }}</a>
 					    	{% else %}
-					    		<a class="nav-link" href="{{ '/works/' | append: medium.medium | relative_url }}">{{ medium.medium }}</a>
+					    		<a class="nav-link-hide letter nav-link" href="{{ medium.permalink | relative_url }}">{{ medium.title }}</a>
 					    	{% endif %}
 					    {% endfor %}
-					    {% if page.title == "works" %}
+					    {% if page.title != "home" %}
 					    	<a class="nav-link active text-end" aria-current="page" href="{{ '/works' | relative_url }}">works</a>
 					    {% else %}
 					    	<a class="nav-link text-end" href="{{ '/works' | relative_url }}">works</a>
@@ -40,6 +47,7 @@
 					</div>
 			    </div>
 			  </div>
+			  	<script src="/script/navHover.js"></script>
 			{% endif %}
 		</div>
 	</nav>

@@ -13,6 +13,7 @@ with open('works.json') as json_file:
 				medium_list.append(medium)
 
 for medium in medium_list:
+	medium_name = medium.replace("-", " ")
 	with open("medium_files/" + medium + ".md", "w") as f:
-		f.write("---\nmedium: " + medium + "\npermalink: /works/" + medium + "\n---")
+		f.write("---\ntitle: " + medium_name + "\nmedium: " + medium + "\npermalink: /works/" + medium + "\n---")
 		f.close
