@@ -60,7 +60,7 @@ defaults:
       path: ""
       type: "medium"
     values:
-      layout: "worksmedium"
+      layout: "works"
   - scope:
       path: ""
       type: "work"

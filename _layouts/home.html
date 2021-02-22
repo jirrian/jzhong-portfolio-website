@@ -1,0 +1,51 @@
+---
+layout: default
+---
+<body id="home">
+    <div class='layout'>
+      	{% include header.html %}
+      	<div class='container'>
+			<script src="/script/lazyloading.js"></script>
+			<script src="/script/clickableCards.js"></script>
+			<div class="content pt-3">
+				<div class="card">
+					<div class="card-body">
+					    <div class="card-text d-flex">
+					    	<i class="align-self-center bi bi-emoji-smile-fill"></i>
+					    	Jillian Zhong is a designer, programmer, and internet user based in New York, NY.
+					    </div>
+					</div>
+				</div>
+				<div class="card">
+					<div class="card-body">
+					    <div class="card-text"><i class="bi bi-pencil-fill"></i></i><a href="mailto:jillianzhong@gmail.com">jillianzhong@gmail.com</a></div>
+					</div>
+				</div>
+				<div class="card">
+					<div class="card-body ">
+					    <div class="card-text d-flex">
+					    	<i class="align-self-center bi bi-file-earmark-text-fill"></i>
+							<ul class="home-link-list">
+								<li><a href="https://github.com/jirrian">Github</a></li>
+								<li><a href="https://blog.jzhong.today/">ITP Blog</a></li>
+					    	</ul>
+					    </div>
+					</div>
+				</div>
+				<div class="card">
+					<div class="card-body">
+					    <div class="card-text d-flex">
+					    	<i class="bi bi-heart-fill"></i>
+					    	<ul class="home-link-list">
+								<a href="https://shop.jzhong.today">jzhong</a><br />
+								<a href="https://virtualgoodsdealer.com">virtualgoodsdealer</a>
+					    	</ul>
+					    </div>
+					</div>
+				</div>
+			</div>
+		</div>
+		{% include footer.html %}
+	</div>
+	{% include bootstrap-scripts.html %}
+</body>

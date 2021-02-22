@@ -103,7 +103,7 @@ body {
 	margin-bottom: 1rem;
 }
 
-.work-links {
+.work-links, .home-link-list {
 	margin-bottom: 0;
 	list-style-type: none;
   	padding-inline-start: 0px;
@@ -144,6 +144,10 @@ video:focus, audio:focus {
 .footer {
 	@include rfs(1.5rem, margin-top);
 	@include rfs(5rem, margin-bottom);
+}
+
+i{
+	@include rfs(1rem, margin-right);
 }
 
 /* Hover CSS */
