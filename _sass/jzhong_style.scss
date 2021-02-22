@@ -141,6 +141,11 @@ video:focus, audio:focus {
 	margin-bottom: 1rem;
 }
 
+.footer {
+	@include rfs(1.5rem, margin-top);
+	@include rfs(5rem, margin-bottom);
+}
+
 /* Hover CSS */
 /* Grow */
 .hvr-grow {
