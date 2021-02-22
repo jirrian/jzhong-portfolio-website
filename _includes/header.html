@@ -1,8 +1,8 @@
 <header class='header'>
 	{% if page.title == "works" %}
-		<nav class="navbar sticky-top navbar-expand-xl navbar-light">
+		<nav class="header-{{ include.colorway }} navbar sticky-top navbar-expand-xl navbar-light">
 	{% else %}
-		<nav class="navbar sticky-top navbar-expand-xl navbar-light" id="navBar">
+		<nav class="header-{{ include.colorway }} navbar sticky-top navbar-expand-xl navbar-light" id="navBar">
 	{% endif %}	
 		<div class="container-fluid nav-container">
 			<div class="navbar-brand" id="logo">

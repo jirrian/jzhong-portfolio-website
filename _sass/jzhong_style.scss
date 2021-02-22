@@ -5,39 +5,91 @@ body {
   margin: 0px;
 }
 
+.works {
+	background-color: white;
+}
+
+.home {
+	background-color: blue;
+	color: white;
+}
+
+.header-home {
+	background-color: blue;
+	color: white;
+}
+
 #logo{
 	font-family: 'Space Mono', monospace;
 }
 
-#logo a{
+.works #logo a{
 	color: blue;
 }
 
-#logo a:hover{
+.works #logo a:hover{
 	color: blue;
 	text-decoration: none;
 }
 
+.home #logo a{
+	color: white;
+}
+
+.home #logo a:hover{
+	color: white;
+	text-decoration: none;
+}
+
 /* unvisited link */
-.content a:link {
+.home-content a:link {
     text-decoration: underline;
-	color: black;
+	color: white;
 }
 
 /* visited link */
-.content a:visited {
+.home-content a:visited {
     text-decoration: underline;
-	color: black;
+	color: white;
 }
 
 /* mouse over link */
-.content a:hover {
+.home-content a:hover {
     text-decoration: underline;
-    color:gray;
+    color: blue;
+    background: white;
 }
 /* selected link */
-.content a:active {
+.home-content a:active {
+    color: blue;
+    background: white;
     text-decoration: none;
+}
+
+/* unvisited link */
+.header-home .nav-link:link {
+	color: white;
+}
+
+/* visited link */
+.header-home .nav-link:visited {
+	color: white;
+}
+
+/* mouse over link */
+.header-home .nav-link:hover {
+	color: white!important;
+    text-decoration: underline;
+}
+/* selected link */
+.header-home .nav-link:active {
+	color: white;
+    text-decoration: underline;
+}
+
+.header-home .nav-link.active {
+	color: white!important;
+	text-decoration: underline;
 }
 
 /* unvisited link */
@@ -75,6 +127,10 @@ body {
 	padding: 1rem;
 	word-wrap: break-word;
 	border-radius: 0;
+}
+
+.home .card{
+	background-color: blue!important;
 }
 
 .card-body{
@@ -195,6 +251,10 @@ https://tobiasahlin.com/moving-letters/#7
   background-color: blue;
   transform-origin: 0 50%;
   top:20%;
+}
+
+.home .ml11 .line {
+	background-color: white!important;
 }
 
 #index .ml11 .line {
