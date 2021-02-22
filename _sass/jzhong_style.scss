@@ -1,3 +1,4 @@
+@import "../node_modules/rfs/scss";
 body {
   overflow-y: scroll;
   font-family: 'Cutive Mono', monospace;
@@ -40,29 +41,33 @@ body {
 }
 
 /* unvisited link */
-.grid-content a:link {
+.works-content a:link {
 	color: black;
 	text-decoration: none;
 }
 
 /* visited link */
-.grid-content a:visited {
+.works-content a:visited {
 	color: black;
 	text-decoration: none;
 }
 
 /* mouse over link */
-.grid-content a:hover {
+.works-content a:hover {
     color:gray;
     text-decoration: none;
 }
 /* selected link */
-.grid-content a:active {
+.works-content a:active {
     text-decoration: underline;
 }
 
+.works-content .card-title {
+	@include font-size(1.3rem);
+}
+
 .card{
-	margin-bottom:20px;
+	margin-bottom:1rem;
 	border-bottom: 3px solid;
 	border-right: 3px solid;
 	border-top: 1px solid;
@@ -76,11 +81,6 @@ body {
 	padding: 0;
 }
 
-ul {
-  list-style-type: none;
-  padding-inline-start: 0px;
-}
-
 .navbar {
 	padding-top: 1rem;
 	padding-bottom: 3rem;
@@ -91,6 +91,55 @@ ul {
 	padding-right: 3rem;
 }
 
+.work-title {
+	@include font-size(1.8rem);
+}
+
+.work-concept {
+	margin-top: 1rem;
+}
+
+.work-images img{
+	margin-bottom: 1rem;
+}
+
+.work-links {
+	margin-bottom: 0;
+	list-style-type: none;
+  	padding-inline-start: 0px;
+}
+
+.work-links li {
+	padding-top: 0.5rem;
+}
+
+.work-demolink {
+	width: 100%;
+	margin-bottom: 1rem;
+	border-bottom: 3px solid;
+	border-right: 3px solid;
+	border-top: 1px solid;
+	border-left: 1px solid;
+	border-color: blue;
+	color: blue!important;
+	border-radius: 0;
+	text-decoration: none!important;
+}
+
+.work-demolink:hover {
+	background-color: blue;
+	border-color: blue;
+	color: white!important;
+	text-decoration: none!important;
+}
+
+video:focus, audio:focus {
+  outline:none;
+}
+
+.work-video {
+	margin-bottom: 1rem;
+}
 
 /* Hover CSS */
 /* Grow */
@@ -117,7 +166,7 @@ https://tobiasahlin.com/moving-letters/#7
 
 .ml11 {
   font-weight: 200;
-  font-size: 3rem;
+  @include font-size(3rem);
 }
 
 .ml11 .text-wrapper {
@@ -156,9 +205,6 @@ https://tobiasahlin.com/moving-letters/#7
 	display: none;
 }
 
-.work-title {
-	font-size: 2rem;
-}
 
 /* Responsive */
 
@@ -257,9 +303,6 @@ https://tobiasahlin.com/moving-letters/#7
 	.nav-container{
 		padding-left: 1rem;
 		padding-right: 1rem;
-	}
-	.ml11 {
-  		font-size: 2rem;
 	}
 	.navbar {
 		padding-bottom: 1rem;

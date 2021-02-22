@@ -174,7 +174,11 @@
 				"digitalamulet.jpg"
 			],
 			"links":{
-				"video": "https://www.youtube.com/embed/fCvrKaWGQ8c",
+				"video": {
+					"embed-link" : "https://www.youtube.com/embed/fCvrKaWGQ8c?rel=0&autoplay=1&mute=1&playlist=fCvrKaWGQ8c&loop=1",
+					"host" : "youtube",
+					"ratio" : "177.78%"
+				},
 				"blog": [
 					"https://blog.jzhong.today/hardware/Digital-Amulet-Board-Design-Fabrication/",
 					"https://blog.jzhong.today/electronicrituals/Digital-Amulet-Programming/"
@@ -200,7 +204,11 @@
 			"preview": null,
 			"photos": null,
 			"links":{
-				"video": "https://www.youtube.com/embed/TMpmqJIXQF0",
+				"video": {
+					"embed-link" : "https://www.youtube.com/embed/TMpmqJIXQF0?rel=0&autoplay=1&mute=1&playlist=TMpmqJIXQF0&loop=1",
+					"host" : "youtube",
+					"ratio" : "62.5%"
+				},
 				"blog": [
 					"https://blog.jzhong.today/computationaltypo/Asemic-Writing-Teachable-Machine/"
 				],
@@ -224,7 +232,11 @@
 			"preview": null,
 			"photos": null,
 			"links":{
-				"video": "https://player.vimeo.com/video/245221449",
+				"video": {
+					"embed-link" : "https://player.vimeo.com/video/245221449",
+					"host" : "vimeo",
+					"ratio" : "16x9"
+				},
 				"blog": null,
 				"demo": null
 			}
@@ -280,7 +292,11 @@
 				"thesis_personthing1_back.jpg"
 			],
 			"links":{
-				"video": "https://player.vimeo.com/video/335928201",
+				"video": {
+					"embed-link" : "https://player.vimeo.com/video/335928201",
+					"host" : "vimeo",
+					"ratio" : "16x9"
+				},
 				"blog": [
 					"https://blog.jzhong.today/Thesis-Final-Documentation/",
 					"https://blog.jzhong.today/wearables/Person-Thing-1/"
@@ -309,7 +325,11 @@
 				"thesis_personthing2.jpg"
 			],
 			"links":{
-				"video": "https://player.vimeo.com/video/335541114",
+				"video": {
+					"embed-link" : "https://player.vimeo.com/video/335541114",
+					"host" : "vimeo",
+					"ratio" : "16x9"
+				},
 				"blog": [
 					"https://blog.jzhong.today/Thesis-Final-Documentation/"
 				],
