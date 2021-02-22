@@ -5,7 +5,7 @@
         {% if page.title == "home" %}
             {% assign colorway = "home" %}
             <body class="{{ colorway }}">
-        {% elsif page.medium != nil or page.title == "works" %}
+        {% else %}
             {% assign colorway = "works" %}
             <body class="{{ colorway }}">
         {% endif %}

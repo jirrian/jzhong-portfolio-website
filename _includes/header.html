@@ -18,7 +18,7 @@
 			</div>
 			{% if site.pages.size > 0 %}
 			  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-			    <span class="navbar-toggler-icon"></span>
+			    <i class="fa fa-folder-open" aria-hidden="true"></i>
 			  </button>
 			  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
 			    <div class="navbar-nav ms-auto d-flex flex-column">
@@ -28,6 +28,11 @@
 			    		<a class="nav-link text-end" href="{{ '/' | relative_url }}">about</a>
 			    	{% endif %}
 					<div class="ml12 navbar-nav ms-auto">
+						{% if page.title == "works" %}
+					    	<a class="nav-link nav-link-works-top active text-end" aria-current="page" href="{{ '/works' | relative_url }}">works</a>
+					    {% else %}
+					    	<a class="nav-link nav-link-works-top text-end" href="{{ '/works' | relative_url }}">works</a>
+					    {% endif %}
 					    {% for medium in site.medium %}
 					    	{% if page.title == medium.title %}
 					    		<a class="nav-link-show letter nav-link active text-end" aria-current="page" href="{{ medium.permalink | relative_url }}">{{ medium.title}}</a>
@@ -40,9 +45,9 @@
 					    	{% endif %}
 					    {% endfor %}
 					    {% if page.title == "works" %}
-					    	<a class="nav-link active text-end" aria-current="page" href="{{ '/works' | relative_url }}">works</a>
+					    	<a class="nav-link nav-link-works-bottom active text-end" aria-current="page" href="{{ '/works' | relative_url }}">works</a>
 					    {% else %}
-					    	<a class="nav-link text-end" href="{{ '/works' | relative_url }}">works</a>
+					    	<a class="nav-link nav-link-works-bottom text-end" href="{{ '/works' | relative_url }}">works</a>
 					    {% endif %}
 					</div>
 			    </div>
