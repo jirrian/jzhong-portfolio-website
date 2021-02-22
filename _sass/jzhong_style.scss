@@ -101,6 +101,7 @@ body {
 	padding: 1rem;
 	word-wrap: break-word;
 	border-radius: 0;
+	width: 100%;
 }
 
 .home .card{
@@ -109,6 +110,14 @@ body {
 
 .card-body{
 	padding: 0;
+}
+
+.card-work-image {
+	overflow: hidden;
+}
+
+.card-work-image img{
+	height: auto;
 }
 
 .navbar {
@@ -295,42 +304,18 @@ https://tobiasahlin.com/moving-letters/#7
 /* Responsive */
 
 @media (min-width: 1400px){
-	.card-work-image {
-	  	height: 540px;
-	  	width: 960px;
-	  	overflow: hidden;
-	}
-	.card-body {
-		width: 960px;
-	}
 	.nav-link-works-top {
 		display: none;
 	}
 }
 
 @media (min-width: 1200px) and (max-width: 1399px){
-	.card-work-image {
-	  	height: 540px;
-	  	width: 960px;
-	  	overflow: hidden;
-	}
-	.card-body {
-		width: 960px;
-	}
 	.nav-link-works-top {
 		display: none;
 	}
 }
 
 @media (min-width: 992px) and (max-width: 1199px){
-	.card-work-image {
-	  	height: 480px;
-	  	width: 854px;
-	  	overflow: hidden;
-	}
-	.card-body {
-		width: 854px;
-	}
 	.works .ml12 .letter{
 		display: block;
 	}
@@ -343,14 +328,6 @@ https://tobiasahlin.com/moving-letters/#7
 }
 
 @media (min-width: 768px) and (max-width: 991px){
-	.card-work-image {
-	  	height: 360px;
-	  	width: 640px;
-	  	overflow: hidden;
-	}
-	.card-body {
-		width: 640px;
-	}
 	.works .ml12 .letter{
 		display: block;
 	}
@@ -367,14 +344,6 @@ https://tobiasahlin.com/moving-letters/#7
 }
 
 @media (max-width: 767px){
-	.card-work-image {
-	  	height: 279px;
-	  	width: 496px;
-	  	overflow: hidden;
-	}
-	.card-body {
-		width: 496px;
-	}
 	.works .ml12 .letter{
 		display: block;
 	}
@@ -391,13 +360,6 @@ https://tobiasahlin.com/moving-letters/#7
 }
 
 @media (max-width: 575px){
-	.card-work-image {
-	  	height: auto;
-	  	width: 100%;
-	}
-	.card, .card-body {
-		width: 100%;
-	}
 	.works .ml12 .letter{
 		display: block;
 	}

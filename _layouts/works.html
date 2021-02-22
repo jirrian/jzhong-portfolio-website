@@ -28,14 +28,14 @@ layout: default
 											{% else %}
 												{% assign source = assets | append: work[1]['preview'] %}
 												{% assign placeholder = assets_placeholder | append: work[1]['preview'] %}
-												<div class="card-work-image">
+												<div class="card-work-image ratio ratio-16x9">
 													<img src="{{ placeholder }}" data-src="{{ source }}" class="w-100 lazy" alt="{{ work[1]['name'] }}">
 												</div>
 											{% endif %}
 										{% elsif work[1]['photos'][0] != nil %}
 												{% assign source = assets | append: work[1]['photos'][0] %}
 												{% assign placeholder = assets_placeholder | append: work[1]['photos'][0] %}
-												<div class="card-work-image">
+												<div class="card-work-image ratio ratio-16x9">
 													<img src="{{ placeholder }}" data-src="{{ source }}" class="w-100 lazy" alt="{{ work[1]['name'] }}">
 												</div>
 										{% endif %}
