@@ -32,6 +32,10 @@ body {
 	text-decoration: none;
 }
 
+.home-content {
+	@include font-size(1.2rem);
+}
+
 .home #logo a{
 	color: white;
 }
@@ -39,6 +43,10 @@ body {
 .home #logo a:hover{
 	color: white;
 	text-decoration: none;
+}
+
+.home-content, .works-content{
+	@include rfs(1.5rem, padding-top);
 }
 
 /* unvisited link */
@@ -122,12 +130,14 @@ body {
 
 .navbar {
 	padding-top: 1rem;
-	padding-bottom: 3rem;
+	padding-bottom: 0;
 }
 
 .nav-container{
-	padding-left: 3rem;
-	padding-right: 3rem;
+	padding-right: var(--bs-gutter-x,.75rem);
+	padding-left: var(--bs-gutter-x,.75rem);
+	margin-right: auto;
+	margin-left: auto;
 }
 
 /* unvisited link */
@@ -307,11 +317,19 @@ https://tobiasahlin.com/moving-letters/#7
 	.nav-link-works-top {
 		display: none;
 	}
+	.nav-container{
+	    padding-left: 3rem;
+	    padding-right: 3rem;
+	}
 }
 
 @media (min-width: 1200px) and (max-width: 1399px){
 	.nav-link-works-top {
 		display: none;
+	}
+	.nav-container{
+	    padding-left: 3rem;
+	    padding-right: 3rem;
 	}
 }
 
@@ -322,8 +340,8 @@ https://tobiasahlin.com/moving-letters/#7
 	.nav-link-works-bottom {
 		display: none;
 	}
-	.navbar {
-		padding-bottom: 1rem;
+	.nav-container{
+	    max-width: 960px;
 	}
 }
 
@@ -335,11 +353,7 @@ https://tobiasahlin.com/moving-letters/#7
 		display: none;
 	}
 	.nav-container{
-		padding-left: 1rem;
-		padding-right: 1rem;
-	}
-	.navbar {
-		padding-bottom: 1rem;
+	    max-width: 720px;
 	}
 }
 
@@ -351,11 +365,7 @@ https://tobiasahlin.com/moving-letters/#7
 		display: none;
 	}
 	.nav-container{
-		padding-left: 1rem;
-		padding-right: 1rem;
-	}
-	.navbar {
-		padding-bottom: 1rem;
+	    max-width: 540px;
 	}
 }
 
@@ -367,10 +377,18 @@ https://tobiasahlin.com/moving-letters/#7
 		display: none;
 	}
 	.nav-container{
-		padding-left: 1rem;
-		padding-right: 1rem;
+	    width: 100%;
 	}
-	.navbar {
-		padding-bottom: 1rem;
+	.home-content, .works-content{
+		padding-top: 1rem;
+	}
+}
+
+@media (max-width: 374px){
+	.home-content {
+		@include font-size(0.9rem);
+	}
+	.home-bio {
+		@include font-size(1rem);	
 	}
 }
