@@ -69,6 +69,3 @@ defaults:
 
 plugins:
   - jekyll-seo-tag
-
-include:
-  - node_modules
