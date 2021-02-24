@@ -7,6 +7,8 @@ layout: default
 					<div class='row'>
 						{% assign assets = "/assets/portfolio_images/" %}
 						{% assign assets_placeholder = "/assets/portfolio_images/placeholders/" %}
+						{% assign video_assets = "/assets/portfolio_images/video_previews/" %}
+						{% assign video_assets_placeholder = "/assets/portfolio_images/video_previews/placeholders/" %}
 						{% assign works = site.data.works %}
 						{% for work in works %}
 							{% assign display = "false" %}
@@ -22,8 +24,9 @@ layout: default
 										{% if work[1]['preview'] != nil %}
 											{% assign preview_fileext = work[1]['preview'] | slice: -3, 3 %}
 											{% if preview_fileext == "mp4" %}
-												{% assign poster = assets_placeholder | append: work[1]['preview'] %}
-												{% assign source = assets | append: work[1]['preview'] %}
+												{% assign poster = work[1]['preview'] | split: '.' | first %}
+												{% assign poster = video_assets_placeholder | append: poster | append: ".png" %}
+												{% assign source = video_assets | append: work[1]['preview'] %}
 												{% include video-embed.html poster=poster src=source %}
 											{% else %}
 												{% assign source = assets | append: work[1]['preview'] %}
