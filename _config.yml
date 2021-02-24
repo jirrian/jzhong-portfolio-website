@@ -71,4 +71,4 @@ plugins:
   - jekyll-seo-tag
 
 include:
-  - _images
+  - node_modules
