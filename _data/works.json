@@ -1,4 +1,126 @@
 {
+	"details-by-kevin-website":
+		{
+			"name": "Details by Kevin Website",
+			"year": {
+				"start": 2020,
+				"end": 2020
+			},
+			"description": {
+				"medium": "Business website",
+				"concept": "Website design and development for a service business, Details by Kevin."
+			},
+			"mediums": [
+				"web-dev"
+			],
+			"preview": null,
+			"photos":[
+				"image_grid_mockup.png"
+			],
+			"links":{
+				"video": null,
+				"blog": null,
+				"demo": "https://detailsbykevin.com/"
+			}	
+		},
+	"vgd-bod":
+		{
+			"name": "virtualgoodsdealer x bod [包家巷]",
+			"year": {
+				"start": 2019,
+				"end": 2019
+			},
+			"description": {
+				"medium": "Collection of three hoodies and social media campaign",
+				"concept": "Hand screen printed hoodies designed in collaboration with artist bod [包家巷] for the release of their album Music For Self Esteem. An social media campaign was created to promote the hoodie collection and the start of virtualgoodsdealer as a new collaborative project.\nHoodie artwork is by bod [包家巷]. Hoodie design and social media campaign were created in collaboration with Cindie Xin as virtualgoodsdealer."
+			},
+			"mediums": [
+				"fashion",
+				"creative-direction"
+			],
+			"preview": null,
+			"photos":[
+				"image_grid_mockup.png"
+			],
+			"links":{
+				"video": null,
+				"blog": "http://www.musicforselfesteem.com/products.html",
+				"demo": null
+			}	
+		},
+	"vgd-creators":
+		{
+			"name": "Virtualgoodsdealer Creators",
+			"year": {
+				"start": 2020,
+				"end": 2020
+			},
+			"description": {
+				"medium": "Curated online shop",
+				"concept": "Collection featuring apparel, accessories, household goods, art toys, sculpture, prints, and stickers by various creators. Curation of products, online store design, and social media campaign were created in collaboration with Cindie Xin as virtualgoodsdealer."
+			},
+			"mediums": [
+				"creative-direction"
+			],
+			"preview": null,
+			"photos":[
+				"image_grid_mockup.png"
+			],
+			"links":{
+				"video": null,
+				"blog": null,
+				"demo": null
+			}	
+		},
+	"broken-heart-glasses":
+		{
+			"name": "Broken Heart Glasses",
+			"year": {
+				"start": 2018,
+				"end": 2018
+			},
+			"description": {
+				"medium": "Acrylic glasses",
+				"concept": "Heart shaped skinny lenses with dangly crystal and pearl beads. Designed as a product for JZhong."
+			},
+			"mediums": [
+				"fashion"
+			],
+			"preview": null,
+			"photos":[
+				"image_grid_mockup.png"
+			],
+			"links":{
+				"video": null,
+				"blog": null,
+				"demo": null
+			}	
+		},
+	"image-grid":
+		{
+			"name": "Image Grid Jekyll Theme",
+			"year": {
+				"start": 2020,
+				"end": 2021
+			},
+			"description": {
+				"medium": "Website theme",
+				"concept": "A simple responsive image grid theme for displaying image-based content with various built-in customization options."
+			},
+			"mediums": [
+				"web-dev"
+			],
+			"preview": "image_grid_preview.mp4",
+			"photos":[
+				"image_grid_mockup.png",
+				"image_grid_preview.mp4"
+			],
+			"links":{
+				"video": null,
+				"blog": "https://github.com/jirrian/jekyll-theme-image-grid",
+				"demo": "https://www.jzhong.today/image-grid-example/"
+			}	
+		},
 	"meteor-glasses":
 		{
 			"name": "Meteor Glasses",
@@ -7,8 +129,8 @@
 				"end": 2017
 			},
 			"description": {
-				"medium": "Lazercut acrylic lenses, stainless steel bridge, and high nickel alloy temples.",
-				"concept": "Cateye glasses inspired by Americana and Nascar imagery."
+				"medium": "Acrylic glasses",
+				"concept": "Cateye glasses inspired by Americana and Nascar imagery. Designed as a product for JZhong."
 			},
 			"mediums": [
 				"fashion"
@@ -167,7 +289,8 @@
 			},
 			"mediums":[
 				"interactive",
-				"wearable-tech"
+				"wearable-tech",
+				"fashion"
 			],
 			"preview": "digitalamulet_preview.jpg",
 			"photos":[
