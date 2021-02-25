@@ -6,6 +6,8 @@ layout: default
 				{% assign assets = "/assets/portfolio_images/" %}
 				{% assign assets_placeholder = "/assets/portfolio_images/placeholders/" %}
 				{% assign title_slug = page.permalink | split: "/" | last %}
+				{% assign video_assets = "/assets/portfolio_images/videos/" %}
+				{% assign video_assets_placeholder = "/assets/portfolio_images/videos/placeholders/" %}
 				<div class="card">
 					<div class="card-body">
 					<div class="card-title work-title">
@@ -23,9 +25,17 @@ layout: default
 				{% if work_images_array != nil %}
 					<div class="work-images">
 					{% for photo in work_images_array %}
-						{% assign source = assets | append: photo %}
-						{% assign placeholder = assets_placeholder | append: photo %}
-						<img src="{{ placeholder }}" data-src="{{ source }}" class="img-fluid lazy w-100" alt="{{ work[1]['name'] }}">
+						{% assign preview_fileext = photo | slice: -3, 3 %}
+						{% if preview_fileext == "mp4" %}
+							{% assign poster = photo | split: '.' | first %}
+							{% assign poster = video_assets_placeholder | append: poster | append: ".png" %}
+							{% assign source = video_assets | append: photo %}
+							{% include video-embed.html poster=poster src=source %}
+						{% else %}
+							{% assign source = assets | append: photo %}
+							{% assign placeholder = assets_placeholder | append: photo %}
+							<img src="{{ placeholder }}" data-src="{{ source }}" class="img-fluid lazy w-100" alt="{{ work[1]['name'] }}">
+						{% endif %}
 					{% endfor %}
 					</div>
 				{% endif %}

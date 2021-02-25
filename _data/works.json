@@ -15,7 +15,7 @@
 			],
 			"preview": null,
 			"photos":[
-				"image_grid_mockup.png"
+				"details_by_kevin_mockup.png"
 			],
 			"links":{
 				"video": null,
@@ -40,36 +40,47 @@
 			],
 			"preview": null,
 			"photos":[
-				"image_grid_mockup.png"
+				"bod_hoodies_ig1.png",
+				"bod_hoodies_ig2.png"
 			],
 			"links":{
 				"video": null,
-				"blog": "http://www.musicforselfesteem.com/products.html",
-				"demo": null
+				"blog": null,
+				"demo": null,
+				"external":{
+					"Virtualgoodsdealer products website" : "https://products.virtualgoodsdealer.com/",
+					"Products for Self Esteem": "http://www.musicforselfesteem.com/products.html"
+				}
 			}	
 		},
 	"vgd-creators":
 		{
-			"name": "Virtualgoodsdealer Creators",
+			"name": "virtualgoodsdealer creators",
 			"year": {
 				"start": 2020,
 				"end": 2020
 			},
 			"description": {
-				"medium": "Curated online shop",
+				"medium": "Curated online shop and social media campaign",
 				"concept": "Collection featuring apparel, accessories, household goods, art toys, sculpture, prints, and stickers by various creators. Curation of products, online store design, and social media campaign were created in collaboration with Cindie Xin as virtualgoodsdealer."
 			},
 			"mediums": [
 				"creative-direction"
 			],
-			"preview": null,
+			"preview": "vgd_creators_preview.png",
 			"photos":[
-				"image_grid_mockup.png"
+				"vgd_creators.png",
+				"vgd_creators_ig.png"
 			],
 			"links":{
 				"video": null,
 				"blog": null,
-				"demo": null
+				"demo": null,
+				"external":{
+					"Virtualgoodsdealer products website" : "https://products.virtualgoodsdealer.com/",
+					"Virtualgoodsdealer Creators October 2020 Rewind" : "https://pages.virtualgoodsdealer.com/articles/2020/11/07/virtualgoodsdealer-creators-october-rewind/",
+					"Virtualgoodsdealer Creators November 2020 Rewind" : "https://pages.virtualgoodsdealer.com/articles/2020/12/01/virtualgoodsdealer-creators-november-rewind/"
+				}
 			}	
 		},
 	"broken-heart-glasses":
@@ -80,11 +91,12 @@
 				"end": 2018
 			},
 			"description": {
-				"medium": "Acrylic glasses",
+				"medium": "Acrylic glasses and lookbook",
 				"concept": "Heart shaped skinny lenses with dangly crystal and pearl beads. Designed as a product for JZhong."
 			},
 			"mediums": [
-				"fashion"
+				"fashion",
+				"creative-direction"
 			],
 			"preview": null,
 			"photos":[
@@ -93,7 +105,10 @@
 			"links":{
 				"video": null,
 				"blog": null,
-				"demo": null
+				"demo": null,
+				"external":{
+					"JZhong website" : "https://shop.jzhong.today/"
+				}
 			}	
 		},
 	"image-grid":
@@ -101,11 +116,11 @@
 			"name": "Image Grid Jekyll Theme",
 			"year": {
 				"start": 2020,
-				"end": 2021
+				"end": 2020
 			},
 			"description": {
 				"medium": "Website theme",
-				"concept": "A simple responsive image grid theme for displaying image-based content with various built-in customization options."
+				"concept": "A simple responsive image grid theme for displaying image-based content with various built-in customization options. Built with Jekyll and Bootstrap 4 for use with Github Pages. Available as a Github Pages remote theme and RubyGem."
 			},
 			"mediums": [
 				"web-dev"
@@ -117,8 +132,11 @@
 			],
 			"links":{
 				"video": null,
-				"blog": "https://github.com/jirrian/jekyll-theme-image-grid",
-				"demo": "https://www.jzhong.today/image-grid-example/"
+				"blog": null,
+				"demo": "https://www.jzhong.today/image-grid-example/",
+				"external":{
+					"Theme Github Repo": "https://github.com/jirrian/jekyll-theme-image-grid"
+				}
 			}	
 		},
 	"meteor-glasses":
@@ -129,11 +147,12 @@
 				"end": 2017
 			},
 			"description": {
-				"medium": "Acrylic glasses",
-				"concept": "Cateye glasses inspired by Americana and Nascar imagery. Designed as a product for JZhong."
+				"medium": "Acrylic glasses and lookbook",
+				"concept": "Cateye glasses inspired by Americana and Nascar imagery. Designed as a product for JZhong.\nLookbook photos by Mary Kang with makeup by Kaitlynn Hong, featuring Mariama Jalloh and Bianca Perez."
 			},
 			"mediums": [
-				"fashion"
+				"fashion",
+				"creative-direction"
 			],
 			"preview": null,
 			"photos":[
@@ -142,7 +161,12 @@
 			"links":{
 				"video": null,
 				"blog": null,
-				"demo": null
+				"demo": null,
+				"external":{
+					"JZhong website" : "https://shop.jzhong.today/",
+					"Vogue.com": "https://www.vogue.com/article/rihanna-statement-sunglasses-fur-pre-grammys-2018",
+					"Hypebae": "https://hypebae.com/2018/3/jzhong-meteor-flame-glasses-rihanna-orange-blue"
+				}
 			}	
 		},
 	"private-beach":
