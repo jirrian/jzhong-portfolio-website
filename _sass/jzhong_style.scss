@@ -191,8 +191,9 @@ body {
 	margin-top: 1rem;
 }
 
-.work-images img, .work-images video{
+.work-images img, .work-images video, .work-images .ratio{
 	margin-bottom: 1rem;
+	width: 100%;
 }
 
 .work-links, .home-link-list {
@@ -227,10 +228,6 @@ body {
 
 video:focus, audio:focus {
   outline:none;
-}
-
-.work-video {
-	margin-bottom: 1rem;
 }
 
 .footer {
