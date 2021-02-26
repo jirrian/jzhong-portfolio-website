@@ -17,7 +17,7 @@ layout: default
 					</div>
 					<div class="card-subtitle work-medium">{{ site.data.works[title_slug]['description']['medium'] }}</div>
 					{% if site.data.works[title_slug]['description']['concept'] != nil %}
-						<div class="card-text work-concept">{{ site.data.works[title_slug]['description']['concept'] }}</div>
+						<div class="card-text work-concept">{{ site.data.works[title_slug]['description']['concept'] | markdownify | remove: "<p>" | remove: "</p>" }}</div>
 					{% endif %}
 					</div>
 				</div>
