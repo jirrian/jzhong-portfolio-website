@@ -318,6 +318,9 @@ https://tobiasahlin.com/moving-letters/#7
 	    padding-left: 3rem;
 	    padding-right: 3rem;
 	}
+	.work-images img, .work-images video, .work-images .ratio{
+		margin-bottom: 1.5rem;
+	}
 }
 
 @media (min-width: 1200px) and (max-width: 1399px){
@@ -327,6 +330,9 @@ https://tobiasahlin.com/moving-letters/#7
 	.nav-container{
 	    padding-left: 3rem;
 	    padding-right: 3rem;
+	}
+	.work-images img, .work-images video, .work-images .ratio{
+		margin-bottom: 1.5rem;
 	}
 }
 

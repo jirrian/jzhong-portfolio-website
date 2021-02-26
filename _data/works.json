@@ -8,7 +8,7 @@
 			},
 			"description": {
 				"medium": "Business website",
-				"concept": "Website design and development for a service business, Details by Kevin."
+			"concept": "Website design and development for a service business, Details by Kevin."
 			},
 			"mediums": [
 				"web-dev"
@@ -38,8 +38,14 @@
 				"fashion",
 				"creative-direction"
 			],
-			"preview": null,
+			"preview": "bod_hoodies_preview1.jpg",
 			"photos":[
+				"hoodie1_front.jpg",
+				"hoodie1_back.jpg",
+				"hoodie2_front.jpg",
+				"hoodie3_front.jpg",
+				"bod_hoodies_preview1.jpg",
+				"bod_hoodies_preview2.jpg",
 				"bod_hoodies_mockup.png",
 				"bod_hoodies_ig1.png",
 				"bod_hoodies_ig2.png"
@@ -193,7 +199,7 @@
 				"interactive",
 				"installation"
 			],
-			"preview": null,
+			"preview": "privatebeach_preview.jpg",
 			"photos":[
 				"privatebeach_shelldetail.png",
 				"privatebeach_users.png"
