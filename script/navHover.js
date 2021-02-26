@@ -24,10 +24,8 @@ if(document.getElementById('navBar')){
         }
     });
 
-
     document.getElementById('navBar').addEventListener("mouseleave", (event) => {
         if( window.innerWidth >= 1200 ){
-            console.log(window.screen.availWidth);
             if (animationEnter){
                 animationEnter.remove(textWrapper.querySelectorAll('.ml12 .letter'));
             }
