@@ -1,7 +1,7 @@
 @import "rfs.scss";
 body {
   overflow-y: scroll;
-  font-family: 'Cutive Mono', monospace;
+  font-family: 'IBM Plex Mono', monospace;
   margin: 0px;
 }
 
@@ -20,7 +20,7 @@ body {
 }
 
 #logo{
-	font-family: 'Space Mono', monospace;
+	font-family: 'IBM Plex Mono', monospace;
 }
 
 .works #logo a{
@@ -94,10 +94,6 @@ body {
 /* selected link */
 .works-content a:active {
     text-decoration: underline;
-}
-
-.works-content .card-title {
-	@include font-size(1.3rem);
 }
 
 .card{
@@ -213,6 +209,8 @@ body {
 	color: blue!important;
 	border-radius: 0;
 	text-decoration: none!important;
+	font-weight: 600;
+	font-family: 'Major Mono Display', monospace;
 }
 
 .work-demolink:hover {
@@ -220,6 +218,16 @@ body {
 	border-color: blue;
 	color: white!important;
 	text-decoration: none!important;
+}
+
+.work-documentation, .work-title {
+	font-weight: 600;
+	font-family: 'Major Mono Display';
+	@include font-size(1.3rem);
+}
+
+.footer {
+	font-family: 'Major Mono Display';
 }
 
 video:focus, audio:focus {

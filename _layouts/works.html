@@ -45,8 +45,8 @@ layout: default
 										{% endif %}
 										<div class="card-body mt-2">
 										    <span class="card-title">
-										    	<a class="work-title main-link" href="/works/{{ work[0] }}">
-											    	<span class="fw-bold">{{ work[1]['name'] }}</span>
+										    	<a class="main-link work-title" href="/works/{{ work[0] }}">
+											    	<span class="">{{ work[1]['name'] | downcase }}</span>
 											   		<span class="year">({{ work[1]['year']['end'] }})</span>
 											   	</a>
 										   	</span>

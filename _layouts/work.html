@@ -12,7 +12,7 @@ layout: default
 				<div class="card">
 					<div class="card-body">
 					<div class="card-title work-title">
-						<span class="fw-bold">{{ site.data.works[title_slug]['name'] }}</span>
+						<span>{{ site.data.works[title_slug]['name'] | downcase }}</span>
 						<span>({{ site.data.works[title_slug]['year']['end'] }})</span>
 					</div>
 					<div class="card-subtitle work-medium">{{ site.data.works[title_slug]['description']['medium'] }}</div>
@@ -31,13 +31,13 @@ layout: default
 								{% assign poster = photo | split: '.' | first %}
 								{% assign poster = video_assets_placeholder | append: poster | append: ".png" %}
 								{% assign source = video_assets | append: photo %}
-								<div class="col-">
+								<div class="col- align-self-center">
 									{% include video-embed.html poster=poster src=source %}
 								</div>
 							{% else %}
 								{% assign source = assets | append: photo %}
 								{% assign placeholder = assets_placeholder | append: photo %}
-								<div class="col-">
+								<div class="col- align-self-center">
 									<img src="{{ placeholder }}" data-src="{{ source }}" class="img-fluid lazy" alt="{{ work[1]['name'] }}">
 								</div>
 							{% endif %}
@@ -49,7 +49,7 @@ layout: default
 						{% assign work_video_link = work_video['embed-link'] %}
 						{% assign work_video_ratio = work_video['ratio'] %}
 						{% assign work_video_host = work_video['host'] %}
-						<div class="col-">
+						<div class="col- align-self-center">
 							{% include youtube-video-embed.html src=work_video_link ratio=work_video_ratio host=work_video_host %}
 						</div>
 				{% endif %}
@@ -57,14 +57,14 @@ layout: default
 
 				{% assign work_demolink = site.data.works[title_slug]['links']['demo'] %}
 				{% if work_demolink != nil %}
-			  		<a class="btn btn-outline-primary work-demolink" href="{{ work_demolink }}" target="_blank" role="button">View Live</a>
+			  		<a class="btn btn-outline-primary work-demolink" href="{{ work_demolink }}" target="_blank" role="button">view live</a>
 				{% endif %}
 
 				{% assign work_bloglink_array = site.data.works[title_slug]['links']['blog'] %}
 				{% if work_bloglink_array != nil %}
 					<div class="card">
 						<div class="card-body">
-							<div class="fw-bold">Documentation:</div>
+							<div class="work-documentation">documentation</div>
 							<div class="card-text">
 								<ul class="work-links">
 								{% for link in work_bloglink_array %}
