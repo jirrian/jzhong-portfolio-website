@@ -46,9 +46,9 @@
 				"hoodie3_front.jpg",
 				"bod_hoodies_preview1.jpg",
 				"bod_hoodies_preview2.jpg",
-				"bod_hoodies_mockup.png",
 				"bod_hoodies_ig1.png",
-				"bod_hoodies_ig2.png"
+				"bod_hoodies_ig2.png",
+				"bod_hoodies_mockup.png"
 			],
 			"links":{
 				"video": null,
@@ -196,7 +196,6 @@
 				"concept": "Installation exploring intersections of private vs. public spaces and individual experiences within a collective experience."
 			},
 			"mediums":[
-				"interactive",
 				"installation"
 			],
 			"preview": "privatebeach_preview.jpg",
@@ -263,31 +262,6 @@
 				"demo": null
 			}
 		},
-	"new-orleans":
-		{
-			"name": "New Orleans",
-			"year": {
-				"start": 2016,
-				"end": 2016
-			},
-			"description": {
-				"medium": "Photograph series",
-				"concept": null
-			},
-			"mediums":[
-				"media"
-			],
-			"preview": null,
-			"photos":[
-				"img038.jpg",
-				"img042.jpg"
-			],
-			"links":{
-				"video": null,
-				"blog": null,
-				"demo": null
-			}
-		},
 	"paper-memory-paper-meaning":	
 		{
 			"name": "Paper Memory Paper Meaning",
@@ -296,11 +270,10 @@
 				"end": 2018
 			},
 			"description": {
-				"medium": "Interactive website",
+				"medium": "Web experience",
 				"concept": "A tarot deck designed from collected pieces of paper and the personal memories attached to them. It was created as an exploration of how meaning is attributed to tarot cards based on imagery and conventional understandings."
 			},
 			"mediums":[
-				"interactive",
 				"net-art"
 			],
 			"preview": null,
@@ -327,7 +300,6 @@
 				"concept": "An electronic amulet that receives power through the internet. This concept is inspired by the supportive comments often left on personal instagram posts by people that have often never met in person or are physically distant. In a way, through our connections on social media, we can give each other protection and support. The lighting pattern on the LEDs change based on likes and comments on the users instagram posts."
 			},
 			"mediums":[
-				"interactive",
 				"wearable-tech",
 				"fashion"
 			],
@@ -356,11 +328,10 @@
 				"end": 2018
 			},
 			"description": {
-				"medium": "website with ml5 KNN classifier teachable machine",
+				"medium": "Website with ml5 KNN classifier teachable machine",
 				"concept": "A teachable machine that allows the user to create digital asemic writing works with gestures. Inspired by the works of Cecil Touchon."
 			},
 			"mediums":[
-				"interactive",
 				"net-art"
 			],
 			"preview": "asemic_writing_teachable_machine_preview.mp4",
@@ -415,7 +386,6 @@
 				"concept": "A virtual memorial to TKettle on St. Marks (closed Fall 2017)."
 			},
 			"mediums":[
-				"interactive",
 				"mixed-reality"
 			],
 			"preview": null,
@@ -479,8 +449,7 @@
 			},
 			"mediums":[
 				"mixed-reality",
-				"installation",
-				"interactive"
+				"installation"
 			],
 			"preview": null,
 			"photos": [

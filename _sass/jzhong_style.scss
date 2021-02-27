@@ -183,10 +183,6 @@ body {
 	color: black;
 }
 
-.work-title {
-	@include font-size(1.8rem);
-}
-
 .work-concept {
 	margin-top: 1rem;
 }
@@ -328,11 +324,14 @@ https://tobiasahlin.com/moving-letters/#7
 		display: none;
 	}
 	.nav-container{
-	    padding-left: 3rem;
-	    padding-right: 3rem;
+	    padding-left: 1rem;
+	    padding-right: 1rem;
 	}
 	.work-images img, .work-images video, .work-images .ratio{
 		margin-bottom: 1.5rem;
+	}
+	.ml11 {
+		@include font-size(2rem);
 	}
 }
 

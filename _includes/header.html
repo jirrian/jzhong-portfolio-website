@@ -23,31 +23,31 @@
 			  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
 			    <div class="navbar-nav ms-auto d-flex flex-column">
 			    	{% if page.title == "home" %}
-			    		<a class="nav-link active text-end" aria-current="page" href="{{ '/' | relative_url }}">about</a>
+			    		<a class="text-nowrap nav-link active text-end" aria-current="page" href="{{ '/' | relative_url }}">about</a>
 			    	{% else %}
-			    		<a class="nav-link text-end" href="{{ '/' | relative_url }}">about</a>
+			    		<a class="text-nowrap nav-link text-end" href="{{ '/' | relative_url }}">about</a>
 			    	{% endif %}
 					<div class="ml12 navbar-nav ms-auto">
 						{% if page.title == "works" %}
-					    	<a class="nav-link nav-link-works-top active text-end" aria-current="page" href="{{ '/works' | relative_url }}">works</a>
+					    	<a class="text-nowrap nav-link nav-link-works-top active text-end" aria-current="page" href="{{ '/works' | relative_url }}">works</a>
 					    {% else %}
-					    	<a class="nav-link nav-link-works-top text-end" href="{{ '/works' | relative_url }}">works</a>
+					    	<a class="text-nowrap nav-link nav-link-works-top text-end" href="{{ '/works' | relative_url }}">works</a>
 					    {% endif %}
 					    {% for medium in site.medium %}
 					    	{% if page.title == medium.title %}
-					    		<a class="nav-link-show letter nav-link active text-end" aria-current="page" href="{{ medium.permalink | relative_url }}">{{ medium.title}}</a>
+					    		<a class="text-nowrap nav-link-show letter nav-link active text-end" aria-current="page" href="{{ medium.permalink | relative_url }}">{{ medium.title}}</a>
 					    	{% elsif page.medium != nil %}
-					    		<a class="nav-link-hide letter nav-link text-end" href="{{ medium.permalink | relative_url }}">{{ medium.title }}</a>
+					    		<a class="text-nowrap nav-link-hide letter nav-link text-end" href="{{ medium.permalink | relative_url }}">{{ medium.title }}</a>
 					    	{% elsif page.title == "works" %}
-					    		<a class="nav-link-show letter nav-link text-end" href="{{ medium.permalink | relative_url }}">{{ medium.title }}</a>
+					    		<a class="text-nowrap nav-link-show letter nav-link text-end" href="{{ medium.permalink | relative_url }}">{{ medium.title }}</a>
 					    	{% else %}
-					    		<a class="nav-link-hide letter nav-link text-end" href="{{ medium.permalink | relative_url }}">{{ medium.title }}</a>
+					    		<a class="text-nowrap nav-link-hide letter nav-link text-end" href="{{ medium.permalink | relative_url }}">{{ medium.title }}</a>
 					    	{% endif %}
 					    {% endfor %}
 					    {% if page.title == "works" %}
-					    	<a class="nav-link nav-link-works-bottom active text-end" aria-current="page" href="{{ '/works' | relative_url }}">works</a>
+					    	<a class="text-nowrap nav-link nav-link-works-bottom active text-end" aria-current="page" href="{{ '/works' | relative_url }}">works</a>
 					    {% else %}
-					    	<a class="nav-link nav-link-works-bottom text-end" href="{{ '/works' | relative_url }}">works</a>
+					    	<a class="text-nowrap nav-link nav-link-works-bottom text-end" href="{{ '/works' | relative_url }}">works</a>
 					    {% endif %}
 					</div>
 			    </div>
