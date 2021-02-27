@@ -19,7 +19,7 @@ if(document.getElementById('navBar')){
                 translateZ: 0,
                 easing: "easeOutExpo",
                 duration: 1200,
-                delay: (el, i) => 100 + 30 * i
+                delay: anime.stagger(100, {direction: 'reverse'}) // increase delay by 100ms for each elements.
               });
         }
     });
@@ -47,7 +47,7 @@ if(document.getElementById('navBar')){
                         translateZ: 0,
                         easing: "easeOutExpo",
                         duration: 1200,
-                        delay: (el, i) => 100 + 30 * i
+                        delay: anime.stagger(100, {direction: 'reverse'}) // increase delay by 100ms for each elements.
                 });
             });
         }
