@@ -64,7 +64,7 @@ layout: default
 				{% if work_bloglink_array != nil %}
 					<div class="card">
 						<div class="card-body">
-							<div class="work-documentation">documentation</div>
+							<div class="work-linksheading">documentation</div>
 							<div class="card-text">
 								<ul class="work-links">
 								{% for link in work_bloglink_array %}
@@ -74,6 +74,24 @@ layout: default
 								{% endfor %}
 								</ul>
 								<script src="/script/createBlogListItem.js"></script>
+							</div>
+						</div>
+					</div>
+				{% endif %}
+
+				{% assign work_externallink_array = site.data.works[title_slug]['links']['external'] %}
+				{% if work_externallink_array != nil %}
+					<div class="card">
+						<div class="card-body">
+							<div class="work-linksheading">related links</div>
+							<div class="card-text">
+								<ul class="work-links">
+								{% for link in work_externallink_array %}
+									<li>
+										<a href="{{ link[1] }}" target="_blank">{{ link[0] }}</a>
+									</li>
+								{% endfor %}
+								</ul>
 							</div>
 						</div>
 					</div>

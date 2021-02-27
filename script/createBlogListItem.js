@@ -12,12 +12,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 		//remove blog site title
 		var titleText = title.innerText.replace(/\u2013|\u2014/g, "-");
-		if(titleText.includes('- ITP Blog')){
-			link.innerText = titleText.split(' - ')[0];
-		}
-		else{
-			link.innerText = title.innerText;
-		}
+		link.innerText = titleText.split(' - ')[0];
 
 	});
 });

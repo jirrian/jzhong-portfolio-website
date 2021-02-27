@@ -345,7 +345,11 @@
 				"blog": [
 					"https://blog.jzhong.today/computationaltypo/Asemic-Writing-Teachable-Machine/"
 				],
-				"demo": "https://www.jzhong.today/asemicWritingTeachableMachine/"
+				"demo": "https://www.jzhong.today/asemicWritingTeachableMachine/",
+				"external":{
+					"Github Repo": "https://github.com/jirrian/asemicWritingTeachableMachine",
+					"Asemics Magazine": "https://asemics.com/asemic-writing-teachable-machine-jillian-zhong/",
+				}
 			}
 		},
 	"someone-brand-new":	

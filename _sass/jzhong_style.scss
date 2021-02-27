@@ -96,6 +96,25 @@ body {
     text-decoration: underline;
 }
 
+/* unvisited link */
+.work-links a:link {
+	text-decoration: underline;
+}
+
+/* visited link */
+.work-links a:visited {
+	text-decoration: underline;
+}
+
+/* mouse over link */
+.work-links a:hover {
+    text-decoration: underline;
+}
+/* selected link */
+.work-links a:active {
+    text-decoration: none;
+}
+
 .card{
 	margin-bottom:1rem;
 	border-bottom: 3px solid;
@@ -220,7 +239,7 @@ body {
 	text-decoration: none!important;
 }
 
-.work-documentation, .work-title {
+.work-linksheading, .work-title {
 	font-weight: 600;
 	font-family: 'Major Mono Display';
 	@include font-size(1.3rem);
