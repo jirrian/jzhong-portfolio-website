@@ -181,6 +181,33 @@ body {
 	text-decoration: underline;
 }
 
+/* unvisited link */
+.header-works .nav-link:link {
+	color: black;
+}
+
+/* visited link */
+.header-works .nav-link:visited {
+	color: black;
+}
+
+/* mouse over link */
+.header-works .nav-link:hover {
+	color: blue!important;
+}
+/* selected link */
+.header-works .nav-link:active {
+	color: blue!important;
+}
+
+.header-works .nav-link.active {
+	color: blue!important;
+}
+
+.header-works .nav-work {
+	text-decoration: underline!important;
+}
+
 .navbar-toggler {
 	border: 0;
 	padding: 0;
