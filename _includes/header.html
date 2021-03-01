@@ -29,7 +29,9 @@
 			    	{% endif %}
 					<div class="ml12 navbar-nav ms-auto">
 						{% if page.title == "works" %}
-					    	<a class="text-nowrap nav-link nav-link-works-top active text-end" aria-current="page" href="{{ '/works' | relative_url }}">works</a>
+					    	<a class="text-nowrap nav-link nav-link-works-top active text-end nav-work" aria-current="page" href="{{ '/works' | relative_url }}">works</a>
+					    {% elsif page.title != "home" %}
+					    	<a class="text-nowrap nav-link nav-link-works-top text-end nav-work" href="{{ '/works' | relative_url }}">works</a>
 					    {% else %}
 					    	<a class="text-nowrap nav-link nav-link-works-top text-end" href="{{ '/works' | relative_url }}">works</a>
 					    {% endif %}
@@ -45,9 +47,11 @@
 					    	{% endif %}
 					    {% endfor %}
 					    {% if page.title == "works" %}
-					    	<a class="text-nowrap nav-link nav-link-works-bottom active text-end" aria-current="page" href="{{ '/works' | relative_url }}">works</a>
+					    	<a class="text-nowrap nav-link nav-link-works-bottom active text-end nav-work" aria-current="page" href="{{ '/works' | relative_url }}">works</a>
+					    {% elsif page.title != "home" %}
+					    	<a class="text-nowrap nav-link nav-link-works-bottom text-end nav-work" href="{{ '/works' | relative_url }}">works</a>
 					    {% else %}
-					    	<a class="text-nowrap nav-link nav-link-works-bottom text-end" href="{{ '/works' | relative_url }}">works</a>
+					   		<a class="text-nowrap nav-link nav-link-works-bottom text-end" href="{{ '/works' | relative_url }}">works</a>
 					    {% endif %}
 					</div>
 			    </div>
