@@ -213,9 +213,6 @@ body {
   	padding-inline-start: 0px;
 }
 
-.work-links li {
-	padding-top: 0.5rem;
-}
 
 .work-demolink {
 	width: 100%;
@@ -229,7 +226,6 @@ body {
 	border-radius: 0;
 	text-decoration: none!important;
 	font-weight: 600;
-	font-family: 'Major Mono Display', monospace;
 }
 
 .work-demolink:hover {
@@ -239,7 +235,7 @@ body {
 	text-decoration: none!important;
 }
 
-.work-linksheading, .work-title {
+.work-title {
 	font-weight: 600;
 	font-family: 'Major Mono Display';
 	@include font-size(1.3rem);
@@ -258,7 +254,7 @@ video:focus, audio:focus {
 	@include rfs(5rem, margin-bottom);
 }
 
-.home-content i{
+.home-content i, .works-content i{
 	@include rfs(1rem, margin-right);
 }
 
