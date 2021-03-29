@@ -383,6 +383,9 @@ https://tobiasahlin.com/moving-letters/#7
 	.ml11 {
 		@include font-size(2.6rem);
 	}
+	.header {
+		font-size: 0.9rem;
+	}
 }
 
 @media (min-width: 992px) and (max-width: 1199px){
